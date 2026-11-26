@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>MD Jishan Khan & Mehenaj Meherin Maisha — শুভ বিবাহ | Royal Wedding Invitation</title>
+    <title>MD Jishan Khan &amp; Mehenaj Meherin Maisha — শুভ বিবাহ | Royal Wedding Invitation</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Cinzel, Cormorant Garamond, Playfair Display, Hind Siliguri & Noto Serif Bengali -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
-    <!-- Custom Tailwind Theme: Yellow, White, Gold & Maroon -->
     <script>
         tailwind.config = {
             theme: {
@@ -54,7 +51,6 @@
     </script>
 
     <style>
-        /* Crisp High-Contrast Rendering & Royal Backdrop */
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -70,7 +66,6 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* Crisp Ivory & Marigold Silk Paper Texture */
         .royal-ivory-card {
             background-color: #FFFDF9;
             background-image:
@@ -85,14 +80,12 @@
             box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.55);
         }
 
-        /* Crisp Gold & Marigold Metallic Foil Text */
         .gold-foil-text {
             background: linear-gradient(135deg, #F4B41A 0%, #FFF3B0 35%, #D4AF37 68%, #FFE57F 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* 3D Book Cover Scene */
         .book-scene {
             perspective: 1800px;
         }
@@ -110,7 +103,6 @@
             pointer-events: none;
         }
 
-        /* Subtle Ambient Animations */
         @keyframes slowRotate {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -136,12 +128,10 @@
             animation: tasselSway 2.4s ease-in-out infinite;
         }
 
-        /* Mughal Arch Frame */
         .mughal-arch {
             border-radius: 190px 190px 22px 22px;
         }
 
-        /* Hide Horizontal Scrollbar */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -150,7 +140,6 @@
             scrollbar-width: none;
         }
 
-        /* Smooth Scroll Section Entrance */
         .reveal-block {
             opacity: 0;
             transform: translateY(24px);
@@ -164,29 +153,22 @@
 </head>
 <body class="min-h-screen flex justify-center items-start selection:bg-maroon selection:text-marigold-bright">
 
-    <!-- Falling Yellow & Maroon Petals Canvas -->
     <canvas id="petalsCanvas" class="fixed inset-0 pointer-events-none z-40 w-full h-full"></canvas>
 
-    <!-- Centered Mobile-First Royal Invitation Container -->
     <main class="relative w-full max-w-md min-h-screen royal-ivory-card shadow-[0_0_70px_rgba(0,0,0,0.85)] overflow-hidden border-x-2 border-royalGold/70">
 
-        <!-- ========================================================= -->
-        <!-- 1. 3D OPENING MAROON & GOLD BOOK COVER ("SHUBHO BIBAHO")   -->
-        <!-- ========================================================= -->
+        <!-- 1. 3D OPENING BOOK COVER -->
         <section id="bookOverlay" class="fixed inset-0 z-50 flex justify-center items-center bg-black/80 backdrop-blur-sm transition-opacity duration-700">
             <div class="book-scene w-full max-w-md h-full max-h-[100dvh] p-3 sm:p-5 flex items-center justify-center">
                 <div id="bookCover" onclick="openWeddingBook()" role="button" tabindex="0" aria-label="Tap the book to open wedding invitation"
                      class="book-cover relative w-full h-full velvet-maroon-bg rounded-r-2xl rounded-l-md border-2 border-royalGold shadow-2xl cursor-pointer flex flex-col justify-between items-center p-6 text-center select-none overflow-hidden">
 
-                    <!-- Left Book Spine Ridge -->
                     <div class="absolute left-0 top-0 bottom-0 w-5 bg-gradient-to-r from-black/75 via-royalGold/30 to-transparent border-r border-royalGold/40"></div>
                     <div class="absolute left-6 top-0 bottom-0 w-[1px] bg-royalGold/35"></div>
 
-                    <!-- Double Ornamental Inner Borders -->
                     <div class="absolute inset-3.5 border border-royalGold/80 rounded-r-xl rounded-l-sm pointer-events-none"></div>
                     <div class="absolute inset-5 border border-dashed border-marigold-bright/45 rounded-r-lg rounded-l-sm pointer-events-none"></div>
 
-                    <!-- 4 Corner Gold Filigree Ornaments -->
                     <svg class="w-12 h-12 text-royalGold absolute top-5 left-7" viewBox="0 0 64 64" fill="none">
                         <path d="M4 4H46C26 4 14 16 14 36V4" stroke="currentColor" stroke-width="2"/>
                         <circle cx="14" cy="14" r="3.5" fill="#FFFDF9"/>
@@ -204,14 +186,12 @@
                         <circle cx="14" cy="14" r="3.5" fill="#FFFDF9"/>
                     </svg>
 
-                    <!-- Top Sacred Invocation -->
                     <div class="mt-6 z-10">
                         <p class="text-marigold-bright text-xl sm:text-2xl tracking-wide mb-0.5">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
                         <p class="font-bengali text-ivory text-xs sm:text-sm tracking-wider">॥ বিসমিল্লাহির রাহমানির রাহিম ॥</p>
                         <div class="w-32 h-[1.5px] bg-gradient-to-r from-transparent via-royalGold to-transparent mx-auto mt-2"></div>
                     </div>
 
-                    <!-- Center Islamic Geometric Emblem & Monogram -->
                     <div class="z-10 flex flex-col items-center my-auto px-2">
                         <div class="relative w-44 h-44 flex items-center justify-center mb-4">
                             <svg class="w-full h-full text-royalGold animate-slow-rotate drop-shadow-[0_4px_14px_rgba(212,175,55,0.45)]" viewBox="0 0 200 200" fill="none">
@@ -243,7 +223,6 @@
                         </p>
                     </div>
 
-                    <!-- Bottom Tap Prompt -->
                     <div class="mb-5 z-10 animate-float-pulse">
                         <div class="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border-2 border-royalGold bg-ivory text-maroon shadow-[0_0_25px_rgba(244,180,26,0.5)]">
                             <span class="w-2.5 h-2.5 rounded-full bg-maroon animate-ping"></span>
@@ -254,9 +233,7 @@
             </div>
         </section>
 
-        <!-- ========================================================= -->
-        <!-- DECORATIVE TOP MARIGOLD GARLAND & CORNER FLORAL ORNAMENTS -->
-        <!-- ========================================================= -->
+        <!-- TOP GARLAND -->
         <div class="relative w-full z-20 pointer-events-none select-none">
             <svg class="w-full h-24 drop-shadow-sm" viewBox="0 0 420 96" fill="none" preserveAspectRatio="none">
                 <path d="M0,0 Q70,58 140,0 Q210,58 280,0 Q350,58 420,0" stroke="#2E7D32" stroke-width="3" fill="none"/>
@@ -284,35 +261,10 @@
                     <circle cx="398" cy="44" r="7" fill="#F4B41A"/><circle cx="398" cy="58" r="7.5" fill="#FFD166"/>
                     <polygon points="392,68 404,68 398,84" fill="#6B0F1A"/>
                 </g>
-                <g>
-                    <circle cx="45" cy="21" r="6.5" fill="#F4B41A"/><circle cx="70" cy="29" r="7.5" fill="#FFD166"/><circle cx="95" cy="21" r="6.5" fill="#F4B41A"/>
-                    <circle cx="175" cy="21" r="6.5" fill="#FFD166"/><circle cx="210" cy="38" r="7.5" fill="#F4B41A"/><circle cx="245" cy="21" r="6.5" fill="#FFD166"/>
-                    <circle cx="325" cy="21" r="6.5" fill="#F4B41A"/><circle cx="350" cy="29" r="7.5" fill="#FFD166"/><circle cx="375" cy="21" r="6.5" fill="#F4B41A"/>
-                </g>
-            </svg>
-
-            <!-- Soft Corner Floral Ornaments -->
-            <svg class="w-24 h-24 absolute -top-2 -left-3 opacity-95" viewBox="0 0 100 100" fill="none">
-                <circle cx="35" cy="35" r="26" fill="#FFF9E6"/>
-                <circle cx="35" cy="35" r="19" fill="#FFFDF9"/>
-                <circle cx="35" cy="35" r="12" fill="#FFD166"/>
-                <circle cx="35" cy="35" r="5" fill="#6B0F1A"/>
-                <path d="M58 25 Q75 15 70 35 Q58 35 58 25Z" fill="#4A7C59"/>
-                <path d="M25 58 Q15 75 35 70 Q35 58 25 58Z" fill="#4A7C59"/>
-            </svg>
-            <svg class="w-24 h-24 absolute -top-2 -right-3 scale-x-[-1] opacity-95" viewBox="0 0 100 100" fill="none">
-                <circle cx="35" cy="35" r="26" fill="#FFF9E6"/>
-                <circle cx="35" cy="35" r="19" fill="#FFFDF9"/>
-                <circle cx="35" cy="35" r="12" fill="#FFD166"/>
-                <circle cx="35" cy="35" r="5" fill="#6B0F1A"/>
-                <path d="M58 25 Q75 15 70 35 Q58 35 58 25Z" fill="#4A7C59"/>
-                <path d="M25 58 Q15 75 35 70 Q35 58 25 58Z" fill="#4A7C59"/>
             </svg>
         </div>
 
-        <!-- ========================================================= -->
-        <!-- 2. MUGHAL GOLD ARCH CARD WITH BISMILLAH & COUPLE NAMES     -->
-        <!-- ========================================================= -->
+        <!-- 2. MUGHAL GOLD ARCH CARD -->
         <section class="px-5 pt-2 pb-10 text-center reveal-block is-visible">
             <p class="text-maroon font-bold text-xl sm:text-2xl mb-0.5">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
             <p class="font-bengali text-maroon font-bold text-base tracking-wide">
@@ -322,42 +274,18 @@
                 <span class="font-bengali text-maroon font-bold text-base tracking-wider">॥ শুভ বিবাহ | Shubho Bibaho ॥</span>
             </div>
 
-            <!-- Mughal-Style Gold Arch Card -->
             <div class="relative mt-6 mx-auto max-w-[375px] p-1.5 bg-gradient-to-b from-royalGold via-maroon to-royalGold mughal-arch shadow-xl">
                 <div class="bg-gradient-to-b from-marigold-soft via-ivory to-marigold-soft mughal-arch px-5 pt-11 pb-9 border border-maroon/25 relative overflow-hidden">
 
-                    <!-- Crisp Mandala Watermark inside Arch -->
-                    <svg class="w-64 h-64 text-royalGold/20 absolute top-12 left-1/2 -translate-x-1/2 pointer-events-none" viewBox="0 0 100 100" fill="none">
-                        <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="1.2"/>
-                        <rect x="20" y="20" width="60" height="60" stroke="currentColor" stroke-width="1.2"/>
-                        <rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)" stroke="currentColor" stroke-width="1.2"/>
-                    </svg>
-
-                    <div class="flex justify-center mb-2">
-                        <svg class="w-16 h-8" viewBox="0 0 80 34" fill="none">
-                            <path d="M4 30C22 30 32 9 40 4C48 9 58 30 76 30" stroke="#D4AF37" stroke-width="2.5"/>
-                            <circle cx="40" cy="17" r="4.5" fill="#6B0F1A"/>
-                            <circle cx="24" cy="23" r="2.5" fill="#F4B41A"/>
-                            <circle cx="56" cy="23" r="2.5" fill="#F4B41A"/>
-                        </svg>
-                    </div>
-
-                    <p class="font-cormorant italic text-maroon/90 text-base sm:text-lg mb-4">
-                        With the infinite grace of Almighty Allah &amp; blessings of our parents
-                    </p>
-
-                    <!-- Groom Details -->
                     <div class="relative z-10">
                         <h1 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon tracking-wide">
                             MD Jishan Khan
                         </h1>
                         <p class="font-cormorant text-base text-gray-800 mt-1 leading-snug">
-                            Son of <span class="font-bold text-maroon-deep">Khalid Khan</span><br>
-                            &amp; <span class="font-bold text-maroon-deep">Mst. Hasina Akther</span>
+                            Son of <span class="font-bold text-maroon-deep">Khalid Khan</span>
                         </p>
                     </div>
 
-                    <!-- Gold & Maroon Ampersand Divider -->
                     <div class="my-4 flex items-center justify-center gap-3">
                         <span class="h-[1.5px] w-14 bg-gradient-to-r from-transparent to-royalGold-dark"></span>
                         <span class="w-9 h-9 rounded-full bg-maroon text-marigold-bright font-playfair italic text-xl flex items-center justify-center shadow-md border-2 border-royalGold">
@@ -366,7 +294,6 @@
                         <span class="h-[1.5px] w-14 bg-gradient-to-l from-transparent to-royalGold-dark"></span>
                     </div>
 
-                    <!-- Bride Details -->
                     <div class="relative z-10">
                         <h1 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon tracking-wide">
                             Mehenaj Meherin Maisha
@@ -386,52 +313,35 @@
             </div>
         </section>
 
-        <!-- ========================================================= -->
-        <!-- 3. "SAVE THE DATE — PULL TO REVEAL" ROYAL SCROLL          -->
-        <!-- ========================================================= -->
+        <!-- 3. PULL-TO-REVEAL SCROLL -->
         <section class="px-5 py-8 reveal-block">
             <div class="text-center mb-4">
                 <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Royal Proclamation</span>
                 <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Save the Date – Pull to Reveal</h2>
-                <p id="scrollInstruction" class="font-cormorant italic text-base text-maroon/85 mt-0.5">
-                    Pull or tap the maroon &amp; gold tassel below to unroll
-                </p>
             </div>
 
             <div class="relative max-w-[355px] mx-auto select-none">
-                <!-- Top Gold Roller -->
                 <div class="relative z-20 h-7 bg-gradient-to-b from-royalGold-light via-royalGold to-royalGold-dark rounded-full shadow-md border border-maroon/30 flex items-center justify-between px-1">
                     <div class="w-4 h-9 -ml-2 bg-maroon rounded-l-md border border-royalGold shadow"></div>
                     <div class="w-24 h-1.5 rounded-full bg-maroon/40"></div>
                     <div class="w-4 h-9 -mr-2 bg-maroon rounded-r-md border border-royalGold shadow"></div>
                 </div>
 
-                <!-- Scroll Parchment Body -->
                 <div id="scrollParchment" style="max-height: 54px;"
                      class="mx-3 bg-gradient-to-b from-marigold-soft via-ivory to-marigold-soft border-x-2 border-royalGold shadow-inner overflow-hidden transition-all duration-700 ease-out">
                     <div class="p-6 text-center space-y-3">
-                        <p class="font-cinzel text-xs uppercase tracking-[0.22em] text-maroon font-bold">
-                            Three Days of Joy &amp; Blessings
+                        <p class="font-playfair text-2xl font-bold text-maroon">03 – 05 December 2026</p>
+                        <div class="py-2.5 border-y border-royalGold space-y-1.5 text-sm font-cormorant font-semibold text-gray-800">
+                            <p><span class="text-maroon font-bold">Gaye Holud:</span> Thu 03/12/2026 • 06:00 PM</p>
+                            <p><span class="text-maroon font-bold">Wedding Ceremony (কনের বাড়িতে):</span> Fri 04/12/2026 • 06:00 PM</p>
+                            <p><span class="text-maroon font-bold">Wedding Reception (ছেলের বাড়িতে):</span> Sat 05/12/2026 • 01:30 PM</p>
+                        </div>
+                        <p class="font-playfair text-base font-bold text-maroon-deep">
+                            Gailkata, Kuliarchar, Kishoreganj
                         </p>
-                        <div class="py-2.5 border-y border-royalGold space-y-1">
-                            <p class="font-playfair text-2xl font-bold text-maroon">03 – 05 December 2026</p>
-                            <p class="font-cormorant text-base sm:text-lg font-semibold text-gray-800">
-                                <span class="text-maroon font-bold">Gaye Holud:</span> Thu 03/12/2026 • 06:00 PM<br>
-                                <span class="text-maroon font-bold">Wedding Ceremony:</span> Fri 04/12/2026 • 06:00 PM<br>
-                                <span class="text-maroon font-bold">Wedding Reception:</span> Sat 05/12/2026 • 01:30 PM
-                            </p>
-                        </div>
-                        <div class="pt-1">
-                            <p class="font-cinzel text-xs uppercase tracking-widest text-royalGold-dark font-bold">Venue</p>
-                            <p class="font-playfair text-lg font-bold text-maroon-deep mt-0.5">
-                                Gailkata, Kuliarchar
-                            </p>
-                            <p class="font-cormorant text-base text-gray-800">Kishoreganj, Bangladesh</p>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Bottom Roller + Interactive Tassel -->
                 <div id="scrollBottomRoller" class="relative z-20 cursor-grab active:cursor-grabbing touch-none">
                     <div class="h-7 bg-gradient-to-b from-royalGold-light via-royalGold to-royalGold-dark rounded-full shadow-lg border border-maroon/30 flex items-center justify-between px-1">
                         <div class="w-4 h-9 -ml-2 bg-maroon rounded-l-md border border-royalGold shadow"></div>
@@ -444,26 +354,17 @@
                     <div id="tasselHandle" class="flex flex-col items-center -mt-1 tassel-sway cursor-pointer">
                         <div class="w-1 h-6 bg-gradient-to-b from-maroon to-royalGold-dark"></div>
                         <div class="w-4 h-4 rounded-full bg-royalGold border-2 border-maroon shadow"></div>
-                        <div class="w-7 h-11 bg-gradient-to-b from-maroon-light to-maroon-deep rounded-b-xl border-t-2 border-royalGold shadow-md flex justify-around px-1 pt-2">
-                            <span class="w-[1.5px] h-full bg-royalGold/80"></span>
-                            <span class="w-[1.5px] h-full bg-ivory/65"></span>
-                            <span class="w-[1.5px] h-full bg-royalGold/80"></span>
-                        </div>
+                        <div class="w-7 h-11 bg-gradient-to-b from-maroon-light to-maroon-deep rounded-b-xl border-t-2 border-royalGold shadow-md"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================================= -->
-        <!-- 4. LIVE COUNTDOWN TIMER + ADD TO CALENDAR (.ICS)          -->
-        <!-- ========================================================= -->
+        <!-- 4. COUNTDOWN + .ICS -->
         <section class="px-5 py-8 reveal-block">
-            <div class="velvet-maroon-bg rounded-3xl p-6 text-center border-2 border-royalGold shadow-xl relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full border border-royalGold/25"></div>
-                <div class="absolute -bottom-10 -left-10 w-28 h-28 rounded-full border border-ivory/15"></div>
-
+            <div class="velvet-maroon-bg rounded-3xl p-6 text-center border-2 border-royalGold shadow-xl">
                 <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-marigold-bright">Counting Down To</span>
-                <h2 class="font-playfair text-2xl font-bold text-ivory mt-1">The Sacred Wedding Ceremony</h2>
+                <h2 class="font-playfair text-2xl font-bold text-ivory mt-1">Wedding Ceremony • কনের বাড়িতে</h2>
                 <p class="font-cormorant italic text-marigold-bright/90 text-sm mb-5">Friday, 04/12/2026 • 06:00 PM</p>
 
                 <div class="grid grid-cols-4 gap-2.5 mb-6">
@@ -485,1059 +386,408 @@
                     </div>
                 </div>
 
-                <button onclick="downloadCalendarICS()"
-                        class="w-full py-3.5 px-5 rounded-full bg-gradient-to-r from-royalGold-dark via-marigold to-marigold-bright text-maroon-deep font-cinzel text-xs sm:text-sm font-extrabold uppercase tracking-[0.15em] shadow-lg border border-ivory/60 hover:brightness-105 active:scale-[0.98] transition flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
+                <button type="button" onclick="downloadCalendarICS()"
+                        class="w-full py-3.5 px-5 rounded-full bg-gradient-to-r from-royalGold-dark via-marigold to-marigold-bright text-maroon-deep font-cinzel text-xs sm:text-sm font-extrabold uppercase tracking-[0.15em] shadow-lg border border-ivory/60">
                     Add to Calendar
                 </button>
             </div>
         </section>
 
-        <!-- ========================================================= -->
-        <!-- 5. FUNCTIONS & DRESS CODE CARDS                           -->
-        <!-- ========================================================= -->
+        <!-- 5. FESTIVITIES & VENUES -->
         <section class="py-8 reveal-block">
             <div class="px-5 text-center mb-5">
-                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Celebrations</span>
-                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Wedding Festivities</h2>
-                <p class="font-cormorant italic text-base text-gray-700">Swipe cards to explore each ceremony &amp; dress code</p>
+                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon">Wedding Festivities &amp; Venues</h2>
             </div>
 
-            <div id="festivitiesCarousel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-4 no-scrollbar scroll-smooth">
-
-                <!-- Function 1: Gaye Holud -->
-                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-marigold shadow-lg p-6 text-center flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 inset-x-0 h-2.5 bg-gradient-to-r from-marigold via-marigold-bright to-marigold"></div>
-                    <div>
-                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-marigold-soft border-2 border-marigold flex items-center justify-center">
-                            <svg class="w-9 h-9 text-marigold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M4 12h16a8 8 0 0 1-16 0Z" fill="#FFD166"/>
-                                <path d="M8 12c0-2.5 1.8-4 4-4s4 1.5 4 4" fill="#F4B41A"/>
-                                <circle cx="12" cy="5" r="1.8" fill="#6B0F1A"/>
-                                <path d="M7 20h10"/>
-                            </svg>
-                        </div>
-                        <h3 class="font-playfair text-2xl font-bold text-maroon">Gaye Holud</h3>
-                        <p class="font-bengali text-xs text-marigold-dark font-bold mt-0.5">গায়ে হলুদ উৎসব</p>
-
-                        <div class="my-4 space-y-1.5 text-base font-cormorant text-gray-800">
-                            <p class="font-bold text-maroon-deep text-lg">Thu 03/12/2026</p>
-                            <p class="font-semibold">⏰ 06:00 PM</p>
-                            <p>📍 Gailkata, Kuliarchar, Kishoreganj</p>
-                        </div>
-                    </div>
-
-                    <!-- Dress Code: Yellow & White -->
-                    <div class="pt-3 border-t border-marigold/40 flex items-center justify-center gap-2.5">
-                        <span class="w-5 h-5 rounded-full bg-marigold border-2 border-ivory shadow ring-1 ring-gray-300"></span>
-                        <span class="w-5 h-5 -ml-3.5 rounded-full bg-ivory border-2 border-marigold shadow"></span>
-                        <span class="font-cinzel text-[11px] font-extrabold uppercase tracking-wider text-maroon">Dress Code: Yellow &amp; White</span>
-                    </div>
+            <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-4 no-scrollbar">
+                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-marigold shadow-lg p-6 text-center">
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-marigold-soft border border-marigold text-maroon font-cinzel text-[11px] font-bold uppercase mb-3">
+                        03 Dec 2026 • 06:00 PM
+                    </span>
+                    <h3 class="font-playfair text-2xl font-bold text-maroon">Gaye Holud</h3>
+                    <p class="font-cormorant text-base text-gray-800 mt-2">Gailkata, Kuliarchar, Kishoreganj</p>
                 </article>
 
-                <!-- Function 2: Wedding Ceremony -->
-                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-maroon shadow-lg p-6 text-center flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 inset-x-0 h-2.5 bg-gradient-to-r from-maroon via-royalGold to-maroon"></div>
-                    <div>
-                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-maroon/10 border-2 border-maroon flex items-center justify-center">
-                            <svg class="w-9 h-9 text-maroon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <circle cx="9.5" cy="14" r="4.8"/>
-                                <circle cx="14.5" cy="14" r="4.8" stroke="#D4AF37"/>
-                                <path d="M12 3a3.5 3.5 0 1 0 3.5 3.5c-.5.4-1.1.6-1.8.6A2.7 2.7 0 0 1 11 4.4c0-.5.2-1 .5-1.4z" fill="#6B0F1A" stroke="none"/>
-                            </svg>
-                        </div>
-                        <h3 class="font-playfair text-2xl font-bold text-maroon">Wedding Ceremony</h3>
-                        <p class="font-bengali text-xs text-maroon font-bold mt-0.5">শুভ বিবাহ ও আকদ</p>
-
-                        <div class="my-4 space-y-1.5 text-base font-cormorant text-gray-800">
-                            <p class="font-bold text-maroon-deep text-lg">Fri 04/12/2026</p>
-                            <p class="font-semibold">⏰ 06:00 PM</p>
-                            <p>📍 Gailkata, Kuliarchar, Kishoreganj</p>
-                        </div>
-                    </div>
-
-                    <!-- Dress Code: Maroon & Gold -->
-                    <div class="pt-3 border-t border-maroon/20 flex items-center justify-center gap-2.5">
-                        <span class="w-5 h-5 rounded-full bg-maroon border-2 border-ivory shadow ring-1 ring-gray-300"></span>
-                        <span class="w-5 h-5 -ml-3.5 rounded-full bg-royalGold border-2 border-ivory shadow ring-1 ring-gray-300"></span>
-                        <span class="font-cinzel text-[11px] font-extrabold uppercase tracking-wider text-maroon">Dress Code: Maroon &amp; Gold</span>
-                    </div>
+                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-royalGold shadow-lg p-6 text-center">
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-maroon text-marigold-bright font-cinzel text-[11px] font-bold uppercase mb-3">
+                        04 Dec 2026 • 06:00 PM
+                    </span>
+                    <h3 class="font-playfair text-2xl font-bold text-maroon">Wedding Ceremony</h3>
+                    <p class="font-bengali font-bold text-maroon-deep text-base mt-2">কনের বাড়িতে (Bride's House)</p>
+                    <p class="font-cormorant text-sm text-gray-700">Gailkata, Kuliarchar, Kishoreganj</p>
                 </article>
 
-                <!-- Function 3: Wedding Reception -->
-                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-royalGold shadow-lg p-6 text-center flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 inset-x-0 h-2.5 bg-gradient-to-r from-maroon via-ivory to-royalGold"></div>
-                    <div>
-                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-marigold-soft border-2 border-maroon flex items-center justify-center">
-                            <svg class="w-9 h-9 text-maroon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M3 18h18l-1.5-9-4.5 4-3-6-3 6-4.5-4L3 18Z" fill="#FFD166"/>
-                                <path d="M3 20h18"/>
-                            </svg>
-                        </div>
-                        <h3 class="font-playfair text-2xl font-bold text-maroon">Wedding Reception</h3>
-                        <p class="font-bengali text-xs text-maroon font-bold mt-0.5">বৌভাত ও সংবর্ধনা</p>
-
-                        <div class="my-4 space-y-1.5 text-base font-cormorant text-gray-800">
-                            <p class="font-bold text-maroon-deep text-lg">Sat 05/12/2026</p>
-                            <p class="font-semibold">⏰ 01:30 PM</p>
-                            <p>📍 Gailkata, Kuliarchar, Kishoreganj</p>
-                        </div>
-                    </div>
-
-                    <!-- Dress Code: Festive Maroon, Gold & Cream -->
-                    <div class="pt-3 border-t border-royalGold/40 flex items-center justify-center gap-2.5">
-                        <span class="w-5 h-5 rounded-full bg-maroon border-2 border-ivory shadow"></span>
-                        <span class="w-5 h-5 -ml-3.5 rounded-full bg-royalGold border-2 border-ivory shadow"></span>
-                        <span class="w-5 h-5 -ml-3.5 rounded-full bg-ivory-warm border-2 border-maroon shadow"></span>
-                        <span class="font-cinzel text-[11px] font-extrabold uppercase tracking-wider text-maroon">Dress Code: Festive Maroon, Gold &amp; Cream</span>
-                    </div>
+                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-royalGold shadow-lg p-6 text-center">
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-marigold-soft border border-royalGold text-maroon font-cinzel text-[11px] font-bold uppercase mb-3">
+                        05 Dec 2026 • 01:30 PM
+                    </span>
+                    <h3 class="font-playfair text-2xl font-bold text-maroon">Wedding Reception</h3>
+                    <p class="font-bengali font-bold text-maroon-deep text-base mt-2">ছেলের বাড়িতে (Groom's House)</p>
+                    <p class="font-cormorant text-sm text-gray-700">Gailkata, Kuliarchar, Kishoreganj</p>
                 </article>
-            </div>
-
-            <!-- Carousel Dots -->
-            <div class="flex justify-center gap-2 mt-2" id="festivitiesDots">
-                <button onclick="scrollCarousel('festivitiesCarousel', 0)" aria-label="Slide 1" class="w-5 h-2.5 rounded-full bg-maroon transition-all"></button>
-                <button onclick="scrollCarousel('festivitiesCarousel', 1)" aria-label="Slide 2" class="w-2.5 h-2.5 rounded-full bg-royalGold transition-all"></button>
-                <button onclick="scrollCarousel('festivitiesCarousel', 2)" aria-label="Slide 3" class="w-2.5 h-2.5 rounded-full bg-royalGold transition-all"></button>
             </div>
         </section>
 
-        <!-- ========================================================= -->
-        <!-- 6. ISLAMIC WEDDING CARTOON ILLUSTRATION STORY CARDS       -->
-        <!-- ========================================================= -->
-        <section class="py-8 reveal-block">
-            <div class="px-5 text-center mb-5">
-                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Illustrated Chapters</span>
-                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Our Islamic Wedding Story</h2>
-                <p class="font-cormorant italic text-base text-gray-700">Swipe to explore our illustrated wedding scenes</p>
-            </div>
-
-            <div id="storyCarousel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-4 no-scrollbar scroll-smooth">
-
-                <!-- Scene 1: Gaye Holud -->
-                <div class="snap-center shrink-0 w-[86%] bg-ivory p-3.5 rounded-3xl border-2 border-marigold shadow-lg">
-                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-b from-marigold-soft via-ivory to-marigold-bright/40 flex items-center justify-center border border-marigold/60">
-                        <img id="storyImg0" src="" alt="Gaye Holud Custom Photo" class="hidden w-full h-full object-cover">
-                        <svg id="storyPlaceholder0" class="w-full h-full p-2" viewBox="0 0 320 230" fill="none">
-                            <path d="M10,16 Q80,54 160,16 Q240,54 310,16" stroke="#2E7D32" stroke-width="2.5" fill="none"/>
-                            <circle cx="50" cy="30" r="6" fill="#F4B41A"/><circle cx="80" cy="35" r="7" fill="#FFD166"/><circle cx="110" cy="30" r="6" fill="#F4B41A"/>
-                            <circle cx="210" cy="30" r="6" fill="#F4B41A"/><circle cx="240" cy="35" r="7" fill="#FFD166"/><circle cx="270" cy="30" r="6" fill="#F4B41A"/>
-                            <path d="M52,216 L52,94 Q52,44 160,34 Q268,44 268,94 L268,216 Z" fill="#FFFDF9" stroke="#F4B41A" stroke-width="2.5"/>
-                            <g transform="translate(80, 68)">
-                                <path d="M12,72 C12,56 54,56 54,72 L60,146 L6,146 Z" fill="#F4B41A" stroke="#6B0F1A" stroke-width="1.8"/>
-                                <path d="M18,60 L48,146 L36,146 L12,72 Z" fill="#FFFDF9" opacity="0.9"/>
-                                <circle cx="33" cy="34" r="18" fill="#F8D2B4" stroke="#6B0F1A" stroke-width="1.5"/>
-                                <path d="M17,36 C17,48 49,48 49,36 C47,44 19,44 17,36 Z" fill="#3E2723"/>
-                                <circle cx="27" cy="31" r="2" fill="#2C1810"/><circle cx="39" cy="31" r="2" fill="#2C1810"/>
-                                <path d="M28,39 Q33,43 38,39" stroke="#6B0F1A" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M16,23 C16,10 50,10 50,23 Z" fill="#FFFDF9" stroke="#D4AF37" stroke-width="2"/>
-                            </g>
-                            <g transform="translate(174, 72)">
-                                <path d="M12,68 C12,54 52,54 52,68 L62,142 L2,142 Z" fill="#F4B41A" stroke="#6B0F1A" stroke-width="1.8"/>
-                                <path d="M11,34 C11,10 53,10 53,34 C55,54 48,68 32,68 C16,68 9,54 11,34 Z" fill="#FFF9E6" stroke="#F4B41A" stroke-width="2"/>
-                                <circle cx="32" cy="34" r="15.5" fill="#FBE0C8"/>
-                                <circle cx="26.5" cy="32" r="1.8" fill="#2C1810"/><circle cx="37.5" cy="32" r="1.8" fill="#2C1810"/>
-                                <path d="M28,39 Q32,43 36,39" stroke="#6B0F1A" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M20,56 Q32,74 44,56" stroke="#F4B41A" stroke-width="4" stroke-linecap="round"/>
-                            </g>
-                            <path d="M160,82 C160,82 151,75 151,69 C151,65 154,63 157,63 C158.8,63 160,64.2 160,65.5 C160,64.2 161.2,63 163,63 C166,63 169,65 169,69 C169,75 160,82 160,82 Z" fill="#6B0F1A"/>
-                        </svg>
-                        <label class="absolute bottom-2 right-2 bg-ivory/95 hover:bg-ivory text-maroon text-[11px] font-cinzel font-bold px-2.5 py-1 rounded-full shadow cursor-pointer border border-royalGold">
-                            + Preview Photo
-                            <input type="file" accept="image/*" class="hidden" onchange="previewStoryPhoto(event, 0)">
-                        </label>
-                    </div>
-                    <div class="pt-3.5 px-1 text-center">
-                        <span class="inline-block px-3 py-0.5 rounded-full bg-marigold-soft border border-marigold text-maroon font-cinzel text-[11px] font-extrabold">GAYE HOLUD • GAILKATA, KULIARCHAR • 2026</span>
-                        <h3 class="font-playfair text-xl font-bold text-maroon mt-1.5">Gaye Holud</h3>
-                        <p class="font-cormorant text-base text-gray-700 mt-1">Draped in marigold yellow &amp; white amidst joyful melodies and turmeric blessings.</p>
-                    </div>
-                </div>
-
-                <!-- Scene 2: Nikah / Ceremony -->
-                <div class="snap-center shrink-0 w-[86%] bg-ivory p-3.5 rounded-3xl border-2 border-maroon shadow-lg">
-                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-b from-maroon via-maroon-light to-maroon-deep flex items-center justify-center border border-royalGold">
-                        <img id="storyImg1" src="" alt="Nikah Ceremony Custom Photo" class="hidden w-full h-full object-cover">
-                        <svg id="storyPlaceholder1" class="w-full h-full p-2" viewBox="0 0 320 230" fill="none">
-                            <path d="M160,16 a13,13 0 1,0 13,13 a10,10 0 1,1 -13,-13 z" fill="#FFD166"/>
-                            <path d="M50,218 L50,92 Q50,42 160,34 Q270,42 270,92 L270,218 Z" fill="#FFFDF9" stroke="#D4AF37" stroke-width="3"/>
-                            <g transform="translate(80, 66)">
-                                <path d="M12,74 C12,58 54,58 54,74 L60,150 L6,150 Z" fill="#6B0F1A" stroke="#D4AF37" stroke-width="2"/>
-                                <circle cx="33" cy="36" r="17.5" fill="#F8D2B4" stroke="#6B0F1A" stroke-width="1.5"/>
-                                <path d="M17,38 C17,49 49,49 49,38 C47,45 19,45 17,38 Z" fill="#3E2723"/>
-                                <circle cx="27" cy="33" r="2" fill="#2C1810"/><circle cx="39" cy="33" r="2" fill="#2C1810"/>
-                                <path d="M28,41 Q33,45 38,41" stroke="#6B0F1A" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M14,25 C14,8 52,8 52,25 Z" fill="#6B0F1A" stroke="#D4AF37" stroke-width="2"/>
-                            </g>
-                            <g transform="translate(174, 70)">
-                                <path d="M10,70 C10,55 54,55 54,70 L64,146 L0,146 Z" fill="#6B0F1A" stroke="#D4AF37" stroke-width="2"/>
-                                <path d="M9,36 C9,9 55,9 55,36 C58,58 50,72 32,72 C14,72 6,58 9,36 Z" fill="#6B0F1A" stroke="#D4AF37" stroke-width="2.2"/>
-                                <circle cx="32" cy="35" r="15.5" fill="#FBE0C8"/>
-                                <circle cx="26.5" cy="33" r="1.8" fill="#2C1810"/><circle cx="37.5" cy="33" r="1.8" fill="#2C1810"/>
-                                <path d="M28,40 Q32,44 36,40" stroke="#6B0F1A" stroke-width="1.5" stroke-linecap="round"/>
-                            </g>
-                            <rect x="115" y="45" width="90" height="20" rx="10" fill="#6B0F1A" stroke="#D4AF37" stroke-width="1.5"/>
-                            <text x="160" y="58" text-anchor="middle" fill="#FFD166" font-size="9.5" font-family="serif" font-weight="bold">NIKAH • QUBOOL</text>
-                        </svg>
-                        <label class="absolute bottom-2 right-2 bg-ivory/95 hover:bg-ivory text-maroon text-[11px] font-cinzel font-bold px-2.5 py-1 rounded-full shadow cursor-pointer border border-royalGold">
-                            + Preview Photo
-                            <input type="file" accept="image/*" class="hidden" onchange="previewStoryPhoto(event, 1)">
-                        </label>
-                    </div>
-                    <div class="pt-3.5 px-1 text-center">
-                        <span class="inline-block px-3 py-0.5 rounded-full bg-maroon text-marigold-bright font-cinzel text-[11px] font-bold">NIKAH CEREMONY • KISHOREGANJ • 2026</span>
-                        <h3 class="font-playfair text-xl font-bold text-maroon mt-1.5">Nikah &amp; Ceremony</h3>
-                        <p class="font-cormorant text-base text-gray-700 mt-1">Sealing our sacred bond in maroon &amp; gold with heartfelt Qubool and family warmth.</p>
-                    </div>
-                </div>
-
-                <!-- Scene 3: Dua & Reception -->
-                <div class="snap-center shrink-0 w-[86%] bg-ivory p-3.5 rounded-3xl border-2 border-royalGold shadow-lg">
-                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-b from-marigold-soft via-ivory to-maroon/10 flex items-center justify-center border border-royalGold/60">
-                        <img id="storyImg2" src="" alt="Dua & Reception Custom Photo" class="hidden w-full h-full object-cover">
-                        <svg id="storyPlaceholder2" class="w-full h-full p-2" viewBox="0 0 320 230" fill="none">
-                            <path d="M45,218 L45,95 Q45,35 160,28 Q275,35 275,95 L275,218 Z" fill="#4A0710" stroke="#D4AF37" stroke-width="3"/>
-                            <path d="M218,62 a12,12 0 1,0 12,12 a9,9 0 1,1 -12,-12 z" fill="#FFD166"/>
-                            <g transform="translate(82, 74)">
-                                <path d="M12,70 C12,54 54,54 54,70 L60,142 L6,142 Z" fill="#6B0F1A" stroke="#D4AF37" stroke-width="1.8"/>
-                                <circle cx="33" cy="34" r="17" fill="#F8D2B4"/>
-                                <path d="M17,36 C17,47 49,47 49,36 C47,43 19,43 17,36 Z" fill="#3E2723"/>
-                                <circle cx="27" cy="31" r="1.9" fill="#2C1810"/><circle cx="39" cy="31" r="1.9" fill="#2C1810"/>
-                                <path d="M16,22 C16,9 50,9 50,22 Z" fill="#FFFDF9" stroke="#D4AF37" stroke-width="2"/>
-                                <ellipse cx="26" cy="78" rx="6" ry="9" fill="#F8D2B4" stroke="#6B0F1A" stroke-width="1.2"/>
-                                <ellipse cx="40" cy="78" rx="6" ry="9" fill="#F8D2B4" stroke="#6B0F1A" stroke-width="1.2"/>
-                            </g>
-                            <g transform="translate(174, 76)">
-                                <path d="M10,68 C10,54 54,54 54,68 L62,140 L2,140 Z" fill="#FFFDF9" stroke="#D4AF37" stroke-width="2"/>
-                                <path d="M10,34 C10,9 54,9 54,34 C56,55 48,68 32,68 C16,68 8,55 10,34 Z" fill="#FFF9E6" stroke="#D4AF37" stroke-width="2"/>
-                                <circle cx="32" cy="34" r="15" fill="#FBE0C8"/>
-                                <circle cx="26.5" cy="32" r="1.8" fill="#2C1810"/><circle cx="37.5" cy="32" r="1.8" fill="#2C1810"/>
-                                <ellipse cx="26" cy="76" rx="5.5" ry="8.5" fill="#FBE0C8" stroke="#6B0F1A" stroke-width="1.2"/>
-                                <ellipse cx="38" cy="76" rx="5.5" ry="8.5" fill="#FBE0C8" stroke="#6B0F1A" stroke-width="1.2"/>
-                            </g>
-                            <path d="M160,96 C160,96 148,86 148,78 C148,73 152,70 156,70 C158.2,70 160,71.5 160,73.2 C160,71.5 161.8,70 164,70 C168,70 172,73 172,78 C172,86 160,96 160,96 Z" fill="#FFD166"/>
-                        </svg>
-                        <label class="absolute bottom-2 right-2 bg-ivory/95 hover:bg-ivory text-maroon text-[11px] font-cinzel font-bold px-2.5 py-1 rounded-full shadow cursor-pointer border border-royalGold">
-                            + Preview Photo
-                            <input type="file" accept="image/*" class="hidden" onchange="previewStoryPhoto(event, 2)">
-                        </label>
-                    </div>
-                    <div class="pt-3.5 px-1 text-center">
-                        <span class="inline-block px-3 py-0.5 rounded-full bg-marigold-soft border border-royalGold text-maroon font-cinzel text-[11px] font-extrabold">DUA &amp; RECEPTION • GAILKATA • 2026</span>
-                        <h3 class="font-playfair text-xl font-bold text-maroon mt-1.5">Dua &amp; Reception</h3>
-                        <p class="font-cormorant text-base text-gray-700 mt-1">Celebrating together in gratitude, prayers, and grand reception hospitality.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 7. OUR JOURNEY TIMELINE + GUEST BLESSING & DUA WALL        -->
-        <!-- ========================================================= -->
-        <section class="px-5 py-8 reveal-block space-y-8">
-            <div>
-                <div class="text-center mb-6">
-                    <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Written in Destiny</span>
-                    <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Our Journey</h2>
-                    <p class="font-bengali text-sm text-maroon/80 font-semibold mt-0.5">আমাদের জীবনের তিনটি সুন্দর অধ্যায়</p>
-                </div>
-
-                <div class="relative max-w-[365px] mx-auto pl-7 border-l-2 border-royalGold space-y-5">
-                    <div class="relative bg-ivory p-4 rounded-2xl border-2 border-royalGold/80 shadow-md">
-                        <span class="absolute -left-[37px] top-4 w-4 h-4 rounded-full bg-maroon border-2 border-royalGold shadow"></span>
-                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-marigold-soft text-maroon font-cinzel text-[10px] font-extrabold tracking-wider border border-royalGold/40">CHAPTER I</span>
-                        <h3 class="font-playfair text-lg font-bold text-maroon mt-1">Family Introduction <span class="font-bengali text-sm font-semibold text-royalGold-dark">(পারিবারিক পরিচয়)</span></h3>
-                        <p class="font-siliguri text-sm text-gray-700 mt-1 leading-relaxed">
-                            দুই পরিবারের মুরুব্বিদের দোয়া, ভালোবাসা ও সম্মতিতে আমাদের জীবনের নতুন পথচলার শুভ সূচনা হয়।
-                        </p>
-                    </div>
-
-                    <div class="relative bg-ivory p-4 rounded-2xl border-2 border-royalGold/80 shadow-md">
-                        <span class="absolute -left-[37px] top-4 w-4 h-4 rounded-full bg-marigold border-2 border-maroon shadow"></span>
-                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-marigold-soft text-maroon font-cinzel text-[10px] font-extrabold tracking-wider border border-royalGold/40">CHAPTER II</span>
-                        <h3 class="font-playfair text-lg font-bold text-maroon mt-1">Engagement &amp; Dua <span class="font-bengali text-sm font-semibold text-royalGold-dark">(বাগদান ও দোয়া)</span></h3>
-                        <p class="font-siliguri text-sm text-gray-700 mt-1 leading-relaxed">
-                            আল্লাহর রহমতে ও সবার দোয়ায় আংটি বদলের মাধ্যমে আমরা একে অপরের পাশে থাকার অঙ্গীকার করি।
-                        </p>
-                    </div>
-
-                    <div class="relative velvet-maroon-bg p-4 rounded-2xl border-2 border-royalGold shadow-lg text-ivory">
-                        <span class="absolute -left-[37px] top-4 w-4 h-4 rounded-full bg-ivory border-2 border-royalGold shadow animate-pulse"></span>
-                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-marigold text-maroon-deep font-cinzel text-[10px] font-extrabold tracking-wider">04 DECEMBER 2026</span>
-                        <h3 class="font-playfair text-lg font-bold text-marigold-bright mt-1">The Sacred Nikah <span class="font-bengali text-sm font-semibold text-ivory">(শুভ বিবাহ ও আকদ)</span></h3>
-                        <p class="font-siliguri text-sm text-ivory/90 mt-1 leading-relaxed">
-                            সুন্নাহ ও ভালোবাসার পবিত্র বন্ধনে আবদ্ধ হতে যাচ্ছি গাইলকাটা, কুলিয়ারচরে। আপনাদের দোয়া একান্ত কাম্য।
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Guest Blessing & Dua Wall -->
-            <div>
-                <div class="text-center mb-5">
-                    <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Prayers &amp; Wishes</span>
-                    <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Blessing &amp; Dua Wall</h2>
-                    <p class="font-bengali text-sm text-maroon/85 font-semibold mt-0.5">নবদম্পতির জন্য আপনার দোয়া ও শুভেচ্ছা লিখুন</p>
-                </div>
-
-                <form id="blessingForm" onsubmit="addGuestBlessing(event)" class="bg-ivory rounded-3xl border-2 border-royalGold p-5 shadow-lg space-y-3 mb-5">
-                    <div class="grid grid-cols-2 gap-2.5">
-                        <div>
-                            <label class="block font-siliguri text-xs font-bold text-maroon mb-1">আপনার নাম (Name) *</label>
-                            <input type="text" id="blessingName" required placeholder="যেমন: তানভীর আহমেদ"
-                                   class="w-full px-3 py-2 rounded-xl border border-royalGold/80 bg-marigold-soft/45 font-siliguri text-sm text-gray-900 focus:outline-none focus:border-maroon">
-                        </div>
-                        <div>
-                            <label class="block font-siliguri text-xs font-bold text-maroon mb-1">সম্পর্ক (Relation)</label>
-                            <input type="text" id="blessingRelation" placeholder="যেমন: বন্ধু / আত্মীয়"
-                                   class="w-full px-3 py-2 rounded-xl border border-royalGold/80 bg-marigold-soft/45 font-siliguri text-sm text-gray-900 focus:outline-none focus:border-maroon">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block font-siliguri text-xs font-bold text-maroon mb-1">দোয়া বা শুভেচ্ছা বার্তা *</label>
-                        <textarea id="blessingText" rows="2" required placeholder="বারাকাল্লাহু লাকুমা ওয়া বারাকা আলাইকুমা! আপনাদের দাম্পত্য জীবন সুখময় হোক।"
-                                  class="w-full px-3 py-2 rounded-xl border border-royalGold/80 bg-marigold-soft/45 font-siliguri text-sm text-gray-900 focus:outline-none focus:border-maroon"></textarea>
-                    </div>
-                    <button type="submit"
-                            class="w-full py-2.5 rounded-full bg-maroon text-marigold-bright font-cinzel text-xs font-bold uppercase tracking-widest border border-royalGold shadow hover:bg-maroon-light active:scale-[0.98] transition">
-                        ✦ Post Dua &amp; Blessing ✦
-                    </button>
-                </form>
-
-                <div id="blessingsList" class="space-y-3 max-h-72 overflow-y-auto pr-1"></div>
-            </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 8. INTERACTIVE WHATSAPP RSVP FORM (8801707279330)          -->
-        <!-- ========================================================= -->
+        <!-- 6. VENUE & WHATSAPP -->
         <section class="px-5 py-8 reveal-block">
-            <div class="velvet-maroon-bg rounded-3xl p-6 border-2 border-royalGold shadow-2xl text-ivory">
+            <div class="bg-ivory rounded-3xl border-2 border-royalGold p-6 text-center shadow-lg">
+                <h2 class="font-playfair text-2xl font-bold text-maroon">Venue &amp; Contact</h2>
+                <p class="font-cormorant text-lg font-bold text-maroon-deep mt-2">
+                    Gailkata, Kuliarchar, Kishoreganj, Bangladesh
+                </p>
+                <p class="font-bengali text-sm text-gray-700 mt-1">
+                    বিবাহ অনুষ্ঠান: কনের বাড়িতে • বৌভাত: ছেলের বাড়িতে
+                </p>
+                <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Gailkata%2C+Kuliarchar%2C+Kishoreganj%2C+Bangladesh"
+                       target="_blank" rel="noopener noreferrer"
+                       class="py-3 px-5 rounded-full bg-maroon text-marigold-bright font-cinzel text-xs font-bold uppercase tracking-wider">
+                        Google Maps
+                    </a>
+                    <a href="https://wa.me/8801707279330"
+                       target="_blank" rel="noopener noreferrer"
+                       class="py-3 px-5 rounded-full bg-gradient-to-r from-royalGold-dark via-marigold to-marigold-bright text-maroon-deep font-cinzel text-xs font-extrabold uppercase tracking-wider">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. LIVE BLESSING WALL -->
+        <section id="blessings" class="px-5 py-8 reveal-block">
+            <div class="bg-ivory rounded-3xl border-2 border-royalGold p-6 shadow-lg">
                 <div class="text-center mb-5">
-                    <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-marigold-bright">Kindly Respond</span>
-                    <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-ivory mt-1">RSVP Confirmation</h2>
-                    <p class="font-bengali text-sm text-marigold-bright mt-0.5">আপনার উপস্থিতি নিশ্চিত করুন</p>
+                    <h2 class="font-playfair text-2xl font-bold text-maroon">Live Blessing Wall</h2>
+                    <span id="blessing-count" class="inline-block mt-1.5 px-3.5 py-0.5 rounded-full bg-marigold-soft border border-royalGold font-bengali text-xs font-bold text-maroon">
+                        লাইভ • ০টি দোয়া
+                    </span>
                 </div>
 
-                <form onsubmit="sendWhatsAppRSVP(event)" class="space-y-4">
-                    <div>
-                        <label class="block font-siliguri text-xs font-semibold text-marigold-bright mb-1">অতিথির নাম (Guest Name) *</label>
-                        <input type="text" id="rsvpName" required placeholder="আপনার পূর্ণ নাম লিখুন"
-                               class="w-full px-3.5 py-2.5 rounded-xl bg-ivory text-gray-900 font-siliguri text-sm border-2 border-royalGold focus:outline-none">
-                    </div>
-
-                    <div>
-                        <label class="block font-siliguri text-xs font-semibold text-marigold-bright mb-1">অতিথি সংখ্যা (Number of Guests)</label>
-                        <select id="rsvpGuests"
-                                class="w-full px-3.5 py-2.5 rounded-xl bg-ivory text-gray-900 font-siliguri text-sm border-2 border-royalGold focus:outline-none">
-                            <option value="1 জন (1 Guest)">১ জন (1 Guest)</option>
-                            <option value="2 জন (2 Guests)" selected>২ জন (2 Guests)</option>
-                            <option value="3 জন (3 Guests)">৩ জন (3 Guests)</option>
-                            <option value="4 জন (4 Guests)">৪ জন (4 Guests)</option>
-                            <option value="5+ জন (Family 5+)">৫+ জন (Family 5+)</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block font-siliguri text-xs font-semibold text-marigold-bright mb-1.5">কোন অনুষ্ঠানে অংশগ্রহণ করবেন?</label>
-                        <div class="grid grid-cols-1 gap-2 bg-ivory/10 p-3 rounded-2xl border border-royalGold/45">
-                            <label class="flex items-center gap-2.5 cursor-pointer font-siliguri text-sm">
-                                <input type="checkbox" name="rsvpEvent" value="Gaye Holud (Thu 03/12/2026, 06:00 PM)" checked class="w-4 h-4 accent-marigold rounded">
-                                <span>Gaye Holud — Thu 03/12/2026 (06:00 PM)</span>
-                            </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer font-siliguri text-sm">
-                                <input type="checkbox" name="rsvpEvent" value="Wedding Ceremony (Fri 04/12/2026, 06:00 PM)" checked class="w-4 h-4 accent-marigold rounded">
-                                <span>Wedding Ceremony — Fri 04/12/2026 (06:00 PM)</span>
-                            </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer font-siliguri text-sm">
-                                <input type="checkbox" name="rsvpEvent" value="Wedding Reception (Sat 05/12/2026, 01:30 PM)" checked class="w-4 h-4 accent-marigold rounded">
-                                <span>Wedding Reception — Sat 05/12/2026 (01:30 PM)</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit"
-                            class="w-full py-3.5 px-4 rounded-full bg-gradient-to-r from-royalGold-dark via-marigold to-marigold-bright text-maroon-deep font-cinzel text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-lg border border-ivory flex items-center justify-center gap-2 hover:brightness-105 active:scale-[0.98] transition">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
-                        </svg>
-                        Confirm via WhatsApp
+                <form id="blessing-form" class="space-y-3 mb-6">
+                    <input type="text" id="guest-name" placeholder="Your Name / আপনার নাম *" maxlength="80" required
+                           class="w-full px-4 py-2.5 rounded-xl bg-white border border-royalGold/70 font-cormorant text-base text-gray-900">
+                    <input type="text" id="guest-relation" placeholder="Relation (Optional)" maxlength="60"
+                           class="w-full px-4 py-2.5 rounded-xl bg-white border border-royalGold/70 font-cormorant text-base text-gray-900">
+                    <textarea id="guest-message" placeholder="Write your blessings or dua *" maxlength="500" rows="3" required
+                              class="w-full px-4 py-2.5 rounded-xl bg-white border border-royalGold/70 font-cormorant text-base text-gray-900"></textarea>
+                    <button type="submit" id="submit-blessing-btn"
+                            class="w-full py-3 px-5 rounded-full bg-maroon text-marigold-bright font-cinzel text-xs font-extrabold uppercase tracking-[0.16em] border border-royalGold">
+                        Send Blessings
                     </button>
+                    <p id="blessing-status" class="font-bengali text-sm font-semibold text-center min-h-[20px]"></p>
                 </form>
-            </div>
-        </section>
 
-        <!-- ========================================================= -->
-        <!-- 9. GRAND RECEPTION CARD + WEATHER NOTE + FAMILY CONTACTS  -->
-        <!-- ========================================================= -->
-        <section class="px-5 py-6 reveal-block space-y-6">
-            <!-- Grand Reception (Boubhat) Invitation Card -->
-            <div class="bg-ivory rounded-3xl border-2 border-royalGold p-6 text-center shadow-xl relative overflow-hidden">
-                <div class="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-maroon via-marigold to-maroon"></div>
-                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Walima &amp; Feast</span>
-                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Grand Reception (Boubhat)</h2>
-                <p class="font-bengali text-sm font-bold text-maroon/90 mt-0.5">শুভ বৌভাত ও প্রীতিভোজ</p>
-                <div class="w-24 h-[1.5px] bg-gradient-to-r from-transparent via-royalGold to-transparent mx-auto my-3"></div>
-                <p class="font-cormorant text-base text-gray-800 leading-relaxed">
-                    <span class="font-bold text-maroon-deep">Khalid Khan &amp; Mst. Hasina Akther</span><br>
-                    warmly request the honor of your presence at the Grand Reception celebrating the union of
-                </p>
-                <p class="font-playfair text-xl font-bold text-maroon mt-2">
-                    MD Jishan Khan &amp; Mehenaj Meherin Maisha
-                </p>
-                <div class="mt-4 py-2.5 px-4 rounded-2xl bg-marigold-soft border border-royalGold text-sm font-cormorant text-gray-900">
-                    <p class="font-bold text-maroon-deep">Saturday, 05/12/2026 • 01:30 PM Onwards</p>
-                    <p>Gailkata, Kuliarchar, Kishoreganj, Bangladesh</p>
-                </div>
-            </div>
-
-            <!-- Kishoreganj December Weather Note -->
-            <div class="bg-marigold-soft rounded-3xl border-2 border-marigold p-5 shadow-md flex items-start gap-3.5">
-                <div class="w-11 h-11 rounded-2xl bg-maroon text-marigold-bright flex items-center justify-center shrink-0 mt-0.5 shadow">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-playfair text-lg font-bold text-maroon">Kishoreganj December Weather Note</h3>
-                    <p class="font-cormorant text-base text-gray-800 mt-0.5 leading-snug">
-                        Early December in Kishoreganj brings crisp, pleasant winter air and cool evening breezes. Guests are kindly advised to bring light warm shawls or jackets.
-                    </p>
-                    <p class="font-siliguri text-xs text-maroon/90 mt-1">
-                        ডিসেম্বরের শুরুতে কিশোরগঞ্জে হালকা শীত ও মনোরম আবহাওয়া থাকে, তাই সাথে শাল বা জ্যাকেট রাখার অনুরোধ রইলো।
-                    </p>
-                </div>
-            </div>
-
-            <!-- Family Contacts Card (Khalid Khan: +8801754995833) -->
-            <div class="bg-ivory rounded-3xl border-2 border-maroon/30 p-5 shadow-lg">
-                <div class="text-center mb-4">
-                    <span class="font-cinzel text-[11px] uppercase tracking-[0.22em] text-royalGold-dark font-bold">Hospitality &amp; Assistance</span>
-                    <h3 class="font-playfair text-xl font-bold text-maroon">Family Contacts</h3>
-                </div>
-
-                <div class="space-y-3">
-                    <!-- Groom's Father: Khalid Khan -->
-                    <div class="flex items-center justify-between p-3.5 rounded-2xl bg-marigold-soft/65 border border-royalGold">
-                        <div>
-                            <p class="font-playfair font-bold text-maroon text-base">Khalid Khan</p>
-                            <p class="font-siliguri text-xs text-gray-700">Father of the Groom • বরের পিতা</p>
-                            <p class="font-cinzel text-[11px] font-bold text-maroon/80 mt-0.5">+8801754995833</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <a href="tel:+8801754995833" aria-label="Call Khalid Khan"
-                               class="w-9 h-9 rounded-full bg-maroon text-marigold-bright flex items-center justify-center shadow hover:scale-105 transition">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                </svg>
-                            </a>
-                            <a href="https://wa.me/8801754995833" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Khalid Khan"
-                               class="w-9 h-9 rounded-full bg-marigold text-maroon-deep flex items-center justify-center shadow border border-maroon/20 hover:scale-105 transition">
-                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                <div id="blessings-list" class="space-y-3">
+                    <div class="text-center py-4 font-bengali text-sm text-gray-600">লাইভ দোয়াগুলো লোড হচ্ছে...</div>
                 </div>
             </div>
         </section>
-
-        <!-- ========================================================= -->
-        <!-- 10. "HOW TO REACH" CARD FOR GAILKATA, KULIARCHAR, KISHOREGANJ -->
-        <!-- ========================================================= -->
-        <section class="px-5 pt-4 pb-24 reveal-block">
-            <div class="text-center mb-5">
-                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Destination</span>
-                <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">How to Reach</h2>
-                <p class="font-cormorant italic text-base text-gray-700">We eagerly await your graceful presence</p>
-            </div>
-
-            <div class="bg-ivory rounded-3xl border-2 border-royalGold shadow-xl overflow-hidden">
-                <!-- Stylized Map Preview -->
-                <div class="relative h-48 bg-marigold-soft overflow-hidden border-b-2 border-royalGold/60">
-                    <svg class="w-full h-full" viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
-                        <path d="M-20,160 Q110,120 200,155 T420,130 L420,210 L-20,210 Z" fill="#D6EAF8" opacity="0.8"/>
-                        <path d="M-20,160 Q110,120 200,155 T420,130" stroke="#85C1E9" stroke-width="3" fill="none"/>
-                        <path d="M20,0 L140,200" stroke="#E5D8BE" stroke-width="8"/>
-                        <path d="M20,0 L140,200" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="6 6"/>
-                        <path d="M0,95 Q200,70 400,105" stroke="#E5D8BE" stroke-width="10"/>
-                        <path d="M0,95 Q200,70 400,105" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="8 6"/>
-                        <circle cx="70" cy="50" r="14" fill="#A9DFBF" opacity="0.75"/>
-                        <circle cx="310" cy="45" r="18" fill="#A9DFBF" opacity="0.75"/>
-                        <circle cx="290" cy="115" r="12" fill="#A9DFBF" opacity="0.75"/>
-
-                        <g transform="translate(345, 42)" opacity="0.8">
-                            <circle cx="0" cy="0" r="18" stroke="#6B0F1A" stroke-width="1.2"/>
-                            <polygon points="0,-14 3,0 0,14 -3,0" fill="#6B0F1A"/>
-                            <polygon points="-14,0 0,-3 14,0 0,3" fill="#D4AF37"/>
-                            <text x="-3" y="-19" font-size="8" fill="#6B0F1A" font-family="serif" font-weight="bold">N</text>
-                        </g>
-
-                        <g transform="translate(200, 86)">
-                            <circle cx="0" cy="0" r="24" fill="#6B0F1A" opacity="0.18">
-                                <animate attributeName="r" values="14;28;14" dur="2.5s" repeatCount="indefinite"/>
-                                <animate attributeName="opacity" values="0.35;0.05;0.35" dur="2.5s" repeatCount="indefinite"/>
-                            </circle>
-                            <path d="M0,-28 C-11,-28 -18,-20 -18,-10 C-18,4 0,20 0,20 C0,20 18,4 18,-10 C18,-20 11,-28 0,-28 Z" fill="#6B0F1A" stroke="#D4AF37" stroke-width="2.2"/>
-                            <circle cx="0" cy="-11" r="6" fill="#FFFDF9"/>
-                        </g>
-                    </svg>
-
-                    <div class="absolute bottom-3 left-3 bg-ivory/95 backdrop-blur px-3 py-1 rounded-full border border-royalGold shadow-xs">
-                        <span class="font-cinzel text-[11px] font-bold text-maroon">Gailkata, Kuliarchar, Kishoreganj</span>
-                    </div>
-                </div>
-
-                <!-- Venue Address & Buttons -->
-                <div class="p-6 text-center">
-                    <h3 class="font-playfair text-xl font-bold text-maroon">Wedding &amp; Reception Venue</h3>
-                    <p id="venueAddressText" class="font-cormorant text-lg text-gray-800 mt-1.5 leading-snug">
-                        Gailkata, Kuliarchar, Kishoreganj, Bangladesh
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-3 mt-5">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Gailkata,+Kuliarchar,+Kishoreganj,+Bangladesh"
-                           target="_blank" rel="noopener noreferrer"
-                           class="py-3 px-3 rounded-full bg-maroon text-marigold-bright font-cinzel text-xs font-bold uppercase tracking-wider shadow-md border border-royalGold hover:bg-maroon-light transition flex items-center justify-center gap-1.5">
-                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Get Directions
-                        </a>
-
-                        <button onclick="copyVenueAddress()"
-                                class="py-3 px-3 rounded-full bg-marigold-soft border-2 border-royalGold text-maroon font-cinzel text-xs font-extrabold uppercase tracking-wider shadow-xs hover:bg-marigold-bright/40 transition flex items-center justify-center gap-1.5">
-                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                            Copy address
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <footer class="mt-12 text-center">
-                <div class="w-28 h-[1.5px] bg-gradient-to-r from-transparent via-royalGold to-transparent mx-auto mb-3"></div>
-                <p class="font-bengali text-maroon font-bold text-base">জিসান ও মাইশা</p>
-                <p class="font-playfair italic text-maroon/85 text-sm mt-0.5">With Warmest Regards, The Khan &amp; Alam Families</p>
-            </footer>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- FLOATING AUDIO PLAY/PAUSE BUTTON                          -->
-        <!-- ========================================================= -->
-        <button id="musicToggleBtn" onclick="toggleWeddingMusic()" aria-label="Play or pause soft instrumental wedding music"
-                class="fixed bottom-5 right-5 z-40 w-12 h-12 rounded-full velvet-maroon-bg border-2 border-royalGold text-marigold-bright shadow-[0_4px_20px_rgba(0,0,0,0.45)] flex items-center justify-center hover:scale-105 active:scale-95 transition">
-            <svg id="iconPlay" class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-            </svg>
-            <svg id="iconPause" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-            </svg>
-        </button>
-
-        <!-- Toast Feedback Banner -->
-        <div id="toastMessage" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-maroon-deep text-marigold-bright border-2 border-royalGold px-5 py-2.5 rounded-full shadow-2xl font-cinzel text-xs tracking-wider opacity-0 pointer-events-none transition-opacity duration-300 whitespace-nowrap">
-            Address copied to clipboard!
-        </div>
-
     </main>
 
-    <!-- ========================================================= -->
-    <!-- COMPLETE SELF-CONTAINED JAVASCRIPT                        -->
-    <!-- ========================================================= -->
     <script>
-        /* 1. 3D BOOK COVER OPENING & AUDIO TRIGGER */
-        let isBookOpened = false;
-
         function openWeddingBook() {
-            if (isBookOpened) return;
-            isBookOpened = true;
-
-            const bookCover = document.getElementById('bookCover');
-            const bookOverlay = document.getElementById('bookOverlay');
-
-            bookCover.classList.add('is-open');
-
-            if (!isMusicPlaying) {
-                startSoftWeddingMelody();
-            }
-
+            const cover = document.getElementById("bookCover");
+            const overlay = document.getElementById("bookOverlay");
+            if (!cover || !overlay) return;
+            cover.classList.add("is-open");
             setTimeout(() => {
-                bookOverlay.style.opacity = '0';
-                setTimeout(() => {
-                    bookOverlay.style.display = 'none';
-                }, 600);
-            }, 850);
+                overlay.style.opacity = "0";
+                overlay.style.pointerEvents = "none";
+                setTimeout(() => { overlay.style.display = "none"; }, 700);
+            }, 650);
         }
 
-        document.getElementById('bookCover').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                openWeddingBook();
+        (function initScrollReveal() {
+            const parchment = document.getElementById("scrollParchment");
+            const roller = document.getElementById("scrollBottomRoller");
+            const tassel = document.getElementById("tasselHandle");
+            const hint = document.getElementById("pullHintPill");
+            if (!parchment || !roller) return;
+
+            let isExpanded = false;
+            let startY = 0;
+            let dragging = false;
+
+            function setExpanded(expand) {
+                isExpanded = expand;
+                parchment.style.maxHeight = expand ? "420px" : "54px";
+                if (hint) hint.textContent = expand ? "↑ Tap to Fold ↑" : "↓ Pull to Reveal ↓";
             }
-        });
 
-        /* 2. "SAVE THE DATE — PULL TO REVEAL" SCROLL */
-        const scrollParchment = document.getElementById('scrollParchment');
-        const scrollBottomRoller = document.getElementById('scrollBottomRoller');
-        const pullHintPill = document.getElementById('pullHintPill');
-        const scrollInstruction = document.getElementById('scrollInstruction');
+            roller.addEventListener("pointerdown", (e) => { dragging = true; startY = e.clientY; });
+            window.addEventListener("pointermove", (e) => {
+                if (!dragging) return;
+                if (e.clientY - startY > 32) { setExpanded(true); dragging = false; }
+                else if (startY - e.clientY > 32) { setExpanded(false); dragging = false; }
+            });
+            window.addEventListener("pointerup", () => { dragging = false; });
+            if (tassel) tassel.addEventListener("click", () => setExpanded(!isExpanded));
+        })();
 
-        let isScrollRevealed = false;
-        let startY = 0;
-        let isDraggingScroll = false;
+        (function initCountdown() {
+            const target = new Date("2026-12-04T18:00:00+06:00").getTime();
+            const dEl = document.getElementById("cd-days");
+            const hEl = document.getElementById("cd-hours");
+            const mEl = document.getElementById("cd-mins");
+            const sEl = document.getElementById("cd-secs");
 
-        function revealRoyalScroll() {
-            isScrollRevealed = true;
-            scrollParchment.style.maxHeight = '340px';
-            pullHintPill.textContent = '✦ Revealed ✦';
-            scrollInstruction.textContent = 'Mark your calendar for our joyous celebrations';
-        }
+            function tick() {
+                const diff = Math.max(0, target - Date.now());
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const mins = Math.floor((diff / (1000 * 60)) % 60);
+                const secs = Math.floor((diff / 1000) % 60);
 
-        function toggleRoyalScroll() {
-            if (!isScrollRevealed) {
-                revealRoyalScroll();
-            } else {
-                isScrollRevealed = false;
-                scrollParchment.style.maxHeight = '54px';
-                pullHintPill.textContent = '↓ Pull to Reveal ↓';
+                if (dEl) dEl.textContent = String(days).padStart(2, "0");
+                if (hEl) hEl.textContent = String(hours).padStart(2, "0");
+                if (mEl) mEl.textContent = String(mins).padStart(2, "0");
+                if (sEl) sEl.textContent = String(secs).padStart(2, "0");
             }
+            tick();
+            setInterval(tick, 1000);
+        })();
+
+        function downloadCalendarICS() {
+            const icsContent = [
+                "BEGIN:VCALENDAR",
+                "VERSION:2.0",
+                "PRODID:-//Jishan & Maisha Wedding//EN",
+                "BEGIN:VEVENT",
+                "UID:jishan-maisha-wedding-20261204@invitation",
+                "DTSTAMP:20261126T060000Z",
+                "DTSTART:20261204T120000Z",
+                "DTEND:20261204T160000Z",
+                "SUMMARY:Wedding Ceremony — MD Jishan Khan & Mehenaj Meherin Maisha",
+                "DESCRIPTION:Wedding Ceremony at Bride's House (04 Dec 2026, 6:00 PM). Reception at Groom's House (05 Dec 2026, 1:30 PM).",
+                "LOCATION:Gailkata, Kuliarchar, Kishoreganj, Bangladesh",
+                "END:VEVENT",
+                "END:VCALENDAR"
+            ].join("\r\n");
+
+            const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Jishan-Maisha-Wedding.ics";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         }
 
-        scrollBottomRoller.addEventListener('pointerdown', (e) => {
-            isDraggingScroll = true;
-            startY = e.clientY;
-        });
+        (function initRevealObserver() {
+            const blocks = document.querySelectorAll(".reveal-block");
+            if (!("IntersectionObserver" in window)) {
+                blocks.forEach((el) => el.classList.add("is-visible"));
+                return;
+            }
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+                    });
+                },
+                { threshold: 0.12 }
+            );
+            blocks.forEach((el) => observer.observe(el));
+        })();
 
-        window.addEventListener('pointermove', (e) => {
-            if (!isDraggingScroll || isScrollRevealed) return;
-            const deltaY = e.clientY - startY;
-            if (deltaY > 12) {
-                const previewHeight = Math.min(340, 54 + deltaY * 1.9);
-                scrollParchment.style.maxHeight = previewHeight + 'px';
-                if (deltaY > 50) {
-                    revealRoyalScroll();
-                    isDraggingScroll = false;
+        (function initPetals() {
+            const canvas = document.getElementById("petalsCanvas");
+            if (!canvas) return;
+            const ctx = canvas.getContext("2d");
+            let width = (canvas.width = window.innerWidth);
+            let height = (canvas.height = window.innerHeight);
+
+            window.addEventListener("resize", () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
+            const colors = ["#F4B41A", "#FFD166", "#941B29", "#FFF3B0"];
+            const petals = Array.from({ length: 16 }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: 3 + Math.random() * 4,
+                speedY: 0.6 + Math.random() * 1.1,
+                speedX: -0.4 + Math.random() * 0.8,
+                angle: Math.random() * Math.PI * 2,
+                color: colors[Math.floor(Math.random() * colors.length)]
+            }));
+
+            function draw() {
+                ctx.clearRect(0, 0, width, height);
+                for (const p of petals) {
+                    p.y += p.speedY;
+                    p.x += p.speedX + Math.sin(p.angle) * 0.35;
+                    p.angle += 0.02;
+                    if (p.y > height + 12) { p.y = -12; p.x = Math.random() * width; }
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.angle);
+                    ctx.fillStyle = p.color;
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, p.r * 1.2, p.r * 0.7, 0, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
                 }
+                requestAnimationFrame(draw);
             }
-        });
+            draw();
+        })();
+    </script>
 
-        window.addEventListener('pointerup', (e) => {
-            if (!isDraggingScroll) return;
-            const deltaY = e.clientY - startY;
-            isDraggingScroll = false;
-            if (Math.abs(deltaY) < 12) {
-                toggleRoyalScroll();
-            } else if (!isScrollRevealed) {
-                scrollParchment.style.maxHeight = '54px';
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import {
+            getDatabase,
+            ref,
+            push,
+            onValue,
+            serverTimestamp
+        } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+
+        const app = initializeApp({
+            databaseURL: "https://jisan-maisha-wedding-default-rtdb.firebaseio.com/"
+        });
+        const db = getDatabase(app);
+        const blessingsRef = ref(db, "blessings");
+
+        const form = document.getElementById("blessing-form");
+        const nameInput = document.getElementById("guest-name");
+        const relInput = document.getElementById("guest-relation");
+        const msgInput = document.getElementById("guest-message");
+        const submitBtn = document.getElementById("submit-blessing-btn");
+        const statusEl = document.getElementById("blessing-status");
+        const listEl = document.getElementById("blessings-list");
+        const countEl = document.getElementById("blessing-count");
+
+        function toBengaliDigits(num) {
+            const bn = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+            return String(num).replace(/\d/g, (d) => bn[Number(d)]);
+        }
+
+        function formatTime(ts) {
+            if (!ts) return "এইমাত্র";
+            const d = new Date(ts);
+            if (Number.isNaN(d.getTime())) return "এইমাত্র";
+            return d.toLocaleString("bn-BD", {
+                day: "numeric",
+                month: "short",
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+        }
+
+        function renderBlessing(item) {
+            const card = document.createElement("div");
+            card.className = "p-4 rounded-2xl bg-marigold-soft/80 border border-royalGold/60";
+
+            const top = document.createElement("div");
+            top.className = "flex items-center justify-between gap-2 mb-1";
+
+            const left = document.createElement("div");
+            const author = document.createElement("span");
+            author.className = "font-bengali font-bold text-maroon text-sm";
+            author.textContent = item.name;
+            left.appendChild(author);
+
+            if (item.relation) {
+                const rel = document.createElement("span");
+                rel.className = "ml-2 px-2 py-0.5 rounded-full bg-white border border-royalGold/50 font-cormorant text-xs text-maroon-deep";
+                rel.textContent = item.relation;
+                left.appendChild(rel);
             }
-        });
 
-        /* 3. LIVE COUNTDOWN TIMER TO 04/12/2026, 06:00 PM (+06:00) */
-        const weddingTargetDate = new Date('2026-12-04T18:00:00+06:00').getTime();
+            const time = document.createElement("span");
+            time.className = "font-bengali text-xs text-gray-600 shrink-0";
+            time.textContent = formatTime(item.createdAt);
 
-        function updateCountdown() {
-            const now = Date.now();
-            const distance = weddingTargetDate - now;
+            top.appendChild(left);
+            top.appendChild(time);
 
-            if (distance <= 0) {
-                document.getElementById('cd-days').textContent = '00';
-                document.getElementById('cd-hours').textContent = '00';
-                document.getElementById('cd-mins').textContent = '00';
-                document.getElementById('cd-secs').textContent = '00';
+            const body = document.createElement("p");
+            body.className = "font-bengali text-sm text-gray-800 whitespace-pre-line";
+            body.textContent = item.message;
+
+            card.appendChild(top);
+            card.appendChild(body);
+            return card;
+        }
+
+        onValue(
+            blessingsRef,
+            (snapshot) => {
+                const val = snapshot.val();
+                listEl.innerHTML = "";
+
+                if (!val) {
+                    countEl.textContent = "লাইভ • ০টি দোয়া";
+                    listEl.innerHTML = '<div class="text-center py-4 font-bengali text-sm text-gray-600">এখনো কোনো দোয়া যুক্ত হয়নি। আপনিই প্রথম দোয়া লিখুন!</div>';
+                    return;
+                }
+
+                const items = Object.entries(val)
+                    .map(([id, data]) => ({
+                        id,
+                        name: String(data?.name || "").trim(),
+                        relation: String(data?.relation || "").trim(),
+                        message: String(data?.message || "").trim(),
+                        createdAt: Number(data?.createdAt) || 0
+                    }))
+                    .filter((item) => item.name && item.message)
+                    .sort((a, b) => b.createdAt - a.createdAt);
+
+                countEl.textContent = `লাইভ • ${toBengaliDigits(items.length)}টি দোয়া`;
+
+                const frag = document.createDocumentFragment();
+                items.forEach((item) => frag.appendChild(renderBlessing(item)));
+                listEl.appendChild(frag);
+            },
+            (err) => {
+                console.error(err);
+                countEl.textContent = "সংযোগ সমস্যা";
+                listEl.innerHTML = '<div class="text-center py-4 font-bengali text-sm text-red-700">লাইভ দোয়া লোড করা যাচ্ছে না।</div>';
+            }
+        );
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            statusEl.textContent = "";
+            statusEl.className = "font-bengali text-sm font-semibold text-center min-h-[20px]";
+
+            const name = nameInput.value.trim();
+            const relation = relInput.value.trim();
+            const message = msgInput.value.trim();
+
+            if (!name || !message) {
+                statusEl.classList.add("text-red-700");
+                statusEl.textContent = "অনুগ্রহ করে নাম এবং দোয়া লিখুন।";
                 return;
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
 
-            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
-            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('cd-mins').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('cd-secs').textContent = String(seconds).padStart(2, '0');
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        /* 4. ADD TO CALENDAR (.ICS DOWNLOAD) */
-        function downloadCalendarICS() {
-            const icsContent = [
-                'BEGIN:VCALENDAR',
-                'VERSION:2.0',
-                'PRODID:-//Jishan & Maisha Wedding//EN',
-                'BEGIN:VEVENT',
-                'UID:jishan-maisha-wedding-2026@weddinginvite',
-                'DTSTAMP:20261125T120000Z',
-                'DTSTART:20261204T120000Z',
-                'DTEND:20261204T170000Z',
-                'SUMMARY:Wedding Ceremony: MD Jishan Khan & Mehenaj Meherin Maisha',
-                'DESCRIPTION:Gaye Holud (Thu 03/12/2026, 06:00 PM), Wedding Ceremony (Fri 04/12/2026, 06:00 PM), Wedding Reception (Sat 05/12/2026, 01:30 PM) at Gailkata, Kuliarchar, Kishoreganj.',
-                'LOCATION:Gailkata, Kuliarchar, Kishoreganj, Bangladesh',
-                'END:VEVENT',
-                'END:VCALENDAR'
-            ].join('\r\n');
-
-            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'Jishan_Maisha_Wedding.ics';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            showToast('Calendar invite downloaded!');
-        }
-
-        /* 5. CAROUSEL HELPER & STORY PHOTO PREVIEW */
-        function scrollCarousel(carouselId, index) {
-            const container = document.getElementById(carouselId);
-            const cardWidth = container.children[0].offsetWidth + 16;
-            container.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
-        }
-
-        const festivitiesCarousel = document.getElementById('festivitiesCarousel');
-        const festivitiesDots = document.getElementById('festivitiesDots').children;
-        festivitiesCarousel.addEventListener('scroll', () => {
-            const cardWidth = festivitiesCarousel.children[0].offsetWidth + 16;
-            const activeIndex = Math.round(festivitiesCarousel.scrollLeft / cardWidth);
-            Array.from(festivitiesDots).forEach((dot, idx) => {
-                if (idx === activeIndex) {
-                    dot.classList.remove('w-2.5', 'bg-royalGold');
-                    dot.classList.add('w-5', 'bg-maroon');
-                } else {
-                    dot.classList.remove('w-5', 'bg-maroon');
-                    dot.classList.add('w-2.5', 'bg-royalGold');
-                }
-            });
+            try {
+                await push(blessingsRef, {
+                    name: name.slice(0, 80),
+                    relation: relation.slice(0, 60),
+                    message: message.slice(0, 500),
+                    createdAt: serverTimestamp()
+                });
+                form.reset();
+                statusEl.classList.add("text-green-800");
+                statusEl.textContent = "আপনার দোয়াটি লাইভ দোয়া ওয়ালে যুক্ত হয়েছে!";
+            } catch (err) {
+                console.error(err);
+                statusEl.classList.add("text-red-700");
+                statusEl.textContent = "পোস্ট করা যায়নি। Firebase Rules বা ইন্টারনেট দেখুন।";
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Blessings";
+            }
         });
-
-        function previewStoryPhoto(event, index) {
-            const file = event.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const imgEl = document.getElementById('storyImg' + index);
-                const placeholderEl = document.getElementById('storyPlaceholder' + index);
-                imgEl.src = e.target.result;
-                imgEl.classList.remove('hidden');
-                if (placeholderEl) placeholderEl.classList.add('hidden');
-                showToast('Photo preview updated!');
-            };
-            reader.readAsDataURL(file);
-        }
-
-        /* 6. BLESSING & DUA WALL (PERSISTED LOCALLY) */
-        const BLESSINGS_KEY = 'jishan_maisha_royal_blessings_v1';
-        const initialBlessings = [
-            {
-                name: 'আরিফুল ইসলাম (Ariful Islam)',
-                relation: 'বন্ধু • Friend',
-                text: 'বারাকাল্লাহু লাকুমা ওয়া বারাকা আলাইকুমা! জিসান ও মাইশার নতুন জীবনের জন্য অনেক অনেক দোয়া ও শুভকামনা।'
-            },
-            {
-                name: 'নুসরাত জাহান (Nusrat Jahan)',
-                relation: 'আত্মীয় • Cousin',
-                text: 'May Almighty Allah bless MD Jishan Khan & Mehenaj Meherin Maisha with endless love, barakah, and happiness forever. Ameen!'
-            }
-        ];
-
-        function loadBlessings() {
-            let list = initialBlessings;
-            try {
-                const saved = localStorage.getItem(BLESSINGS_KEY);
-                if (saved) list = JSON.parse(saved);
-            } catch (e) {}
-            renderBlessings(list);
-        }
-
-        function renderBlessings(list) {
-            const container = document.getElementById('blessingsList');
-            container.innerHTML = '';
-            list.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'bg-ivory p-4 rounded-2xl border border-royalGold/80 shadow-xs';
-                card.innerHTML = `
-                    <div class="flex items-center justify-between mb-1">
-                        <span class="font-siliguri font-bold text-maroon text-sm">${escapeHTML(item.name)}</span>
-                        ${item.relation ? `<span class="text-[11px] font-siliguri px-2.5 py-0.5 rounded-full bg-marigold-soft text-maroon border border-royalGold/50">${escapeHTML(item.relation)}</span>` : ''}
-                    </div>
-                    <p class="font-siliguri text-sm text-gray-800 leading-relaxed">"${escapeHTML(item.text)}"</p>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function addGuestBlessing(event) {
-            event.preventDefault();
-            const nameInput = document.getElementById('blessingName');
-            const relationInput = document.getElementById('blessingRelation');
-            const textInput = document.getElementById('blessingText');
-
-            const newItem = {
-                name: nameInput.value.trim(),
-                relation: relationInput.value.trim() || 'অতিথি • Guest',
-                text: textInput.value.trim()
-            };
-
-            if (!newItem.name || !newItem.text) return;
-
-            let list = [...initialBlessings];
-            try {
-                const saved = localStorage.getItem(BLESSINGS_KEY);
-                if (saved) list = JSON.parse(saved);
-            } catch (e) {}
-
-            list.unshift(newItem);
-            try {
-                localStorage.setItem(BLESSINGS_KEY, JSON.stringify(list));
-            } catch (e) {}
-
-            renderBlessings(list);
-            nameInput.value = '';
-            relationInput.value = '';
-            textInput.value = '';
-            showToast('আপনার দোয়া ও শুভেচ্ছা পোস্ট হয়েছে!');
-        }
-
-        function escapeHTML(str) {
-            return str.replace(/[&<>"']/g, m => ({
-                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-            }[m]));
-        }
-
-        /* 7. DIRECT WHATSAPP RSVP CONFIRMATION TO GROOM (8801707279330) */
-        const GROOM_WHATSAPP_NUMBER = '8801707279330';
-
-        function sendWhatsAppRSVP(event) {
-            event.preventDefault();
-            const guestName = document.getElementById('rsvpName').value.trim();
-            const guestCount = document.getElementById('rsvpGuests').value;
-            const selectedEvents = Array.from(document.querySelectorAll('input[name="rsvpEvent"]:checked'))
-                .map(cb => cb.value);
-
-            const eventsText = selectedEvents.length > 0 ? selectedEvents.join(', ') : 'All Wedding Events';
-
-            const message =
-`আসসালামু আলাইকুম! 🌙✨
-*MD Jishan Khan & Mehenaj Meherin Maisha*-এর শুভ বিবাহ উপলক্ষে আমি আমার উপস্থিতি নিশ্চিত করছি:
-
-👤 *নাম:* ${guestName}
-👥 *অতিথি সংখ্যা:* ${guestCount}
-🎉 *অনুষ্ঠান:* ${eventsText}
-📍 *স্থান:* Gailkata, Kuliarchar, Kishoreganj
-
-নবদম্পতির জন্য অনেক দোয়া ও শুভকামনা! 💛`;
-
-            const waUrl = `https://wa.me/${GROOM_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-            window.open(waUrl, '_blank', 'noopener,noreferrer');
-            showToast('Opening WhatsApp RSVP to 01707279330...');
-        }
-
-        /* 8. COPY VENUE ADDRESS + TOAST */
-        function copyVenueAddress() {
-            const address = 'Gailkata, Kuliarchar, Kishoreganj, Bangladesh';
-            const tempInput = document.createElement('textarea');
-            tempInput.value = address;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            showToast('Address copied to clipboard!');
-        }
-
-        let toastTimeout;
-        function showToast(msg) {
-            const toast = document.getElementById('toastMessage');
-            toast.textContent = msg;
-            toast.style.opacity = '1';
-            clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                toast.style.opacity = '0';
-            }, 2600);
-        }
-
-        /* 9. SOFT AMBIENT INSTRUMENTAL MUSIC (WEB AUDIO API) */
-        let audioCtx = null;
-        let isMusicPlaying = false;
-        let melodyInterval = null;
-
-        const melodyNotes = [261.63, 293.66, 329.63, 369.99, 392.00, 440.00, 493.88, 523.25, 493.88, 392.00, 329.63, 293.66];
-        let noteStep = 0;
-
-        function playGentleNote(freq) {
-            if (!audioCtx) return;
-            const now = audioCtx.currentTime;
-
-            const osc = audioCtx.createOscillator();
-            const subOsc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            const filter = audioCtx.createBiquadFilter();
-
-            osc.type = 'sine';
-            subOsc.type = 'triangle';
-            osc.frequency.setValueAtTime(freq, now);
-            subOsc.frequency.setValueAtTime(freq * 0.5, now);
-
-            filter.type = 'lowpass';
-            filter.frequency.setValueAtTime(750, now);
-
-            gain.gain.setValueAtTime(0.0001, now);
-            gain.gain.exponentialRampToValueAtTime(0.045, now + 0.45);
-            gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.2);
-
-            osc.connect(filter);
-            subOsc.connect(filter);
-            filter.connect(gain);
-            gain.connect(audioCtx.destination);
-
-            osc.start(now);
-            subOsc.start(now);
-            osc.stop(now + 2.3);
-            subOsc.stop(now + 2.3);
-        }
-
-        function startSoftWeddingMelody() {
-            try {
-                if (!audioCtx) {
-                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                }
-                if (audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
-                isMusicPlaying = true;
-                updateMusicIcons();
-
-                playGentleNote(melodyNotes[noteStep % melodyNotes.length]);
-                noteStep++;
-
-                clearInterval(melodyInterval);
-                melodyInterval = setInterval(() => {
-                    if (!isMusicPlaying) return;
-                    playGentleNote(melodyNotes[noteStep % melodyNotes.length]);
-                    noteStep++;
-                }, 1750);
-            } catch (e) {}
-        }
-
-        function stopSoftWeddingMelody() {
-            isMusicPlaying = false;
-            clearInterval(melodyInterval);
-            updateMusicIcons();
-        }
-
-        function toggleWeddingMusic() {
-            if (isMusicPlaying) {
-                stopSoftWeddingMelody();
-                showToast('Music paused');
-            } else {
-                startSoftWeddingMelody();
-                showToast('Playing soft instrumental melody');
-            }
-        }
-
-        function updateMusicIcons() {
-            const iconPlay = document.getElementById('iconPlay');
-            const iconPause = document.getElementById('iconPause');
-            if (isMusicPlaying) {
-                iconPlay.classList.add('hidden');
-                iconPause.classList.remove('hidden');
-            } else {
-                iconPlay.classList.remove('hidden');
-                iconPause.classList.add('hidden');
-            }
-        }
-
-        /* 10. FALLING YELLOW & MAROON PETALS ANIMATION */
-        const canvas = document.getElementById('petalsCanvas');
-        const ctx = canvas.getContext('2d');
-        let petals = [];
-        let viewportWidth = window.innerWidth;
-        let viewportHeight = window.innerHeight;
-
-        function resizePetalsCanvas() {
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
-            viewportWidth = window.innerWidth;
-            viewportHeight = window.innerHeight;
-            canvas.width = viewportWidth * dpr;
-            canvas.height = viewportHeight * dpr;
-            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        }
-        window.addEventListener('resize', resizePetalsCanvas);
-        resizePetalsCanvas();
-
-        const petalColors = ['#F4B41A', '#FFD166', '#6B0F1A', '#D4AF37'];
-
-        function initPetals() {
-            petals = [];
-            const count = viewportWidth < 600 ? 18 : 28;
-            for (let i = 0; i < count; i++) {
-                petals.push({
-                    x: Math.random() * viewportWidth,
-                    y: Math.random() * viewportHeight,
-                    size: 4.5 + Math.random() * 5,
-                    speedY: 0.55 + Math.random() * 0.85,
-                    speedX: -0.35 + Math.random() * 0.7,
-                    angle: Math.random() * Math.PI * 2,
-                    spin: -0.02 + Math.random() * 0.04,
-                    color: petalColors[Math.floor(Math.random() * petalColors.length)]
-                });
-            }
-        }
-
-        function animatePetals() {
-            ctx.clearRect(0, 0, viewportWidth, viewportHeight);
-            petals.forEach(p => {
-                p.y += p.speedY;
-                p.x += p.speedX + Math.sin(p.angle) * 0.3;
-                p.angle += p.spin;
-
-                if (p.y > viewportHeight + 12) {
-                    p.y = -12;
-                    p.x = Math.random() * viewportWidth;
-                }
-                if (p.x > viewportWidth + 12) p.x = -12;
-                if (p.x < -12) p.x = viewportWidth + 12;
-
-                ctx.save();
-                ctx.translate(p.x, p.y);
-                ctx.rotate(p.angle);
-                ctx.fillStyle = p.color;
-                ctx.globalAlpha = 0.72;
-                ctx.beginPath();
-                ctx.ellipse(0, 0, p.size, p.size * 0.58, 0, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.restore();
-            });
-            requestAnimationFrame(animatePetals);
-        }
-
-        window.onload = function() {
-            initPetals();
-            animatePetals();
-            loadBlessings();
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.12 });
-
-            document.querySelectorAll('.reveal-block').forEach(section => {
-                observer.observe(section);
-            });
-        };
     </script>
 </body>
 </html>
