@@ -25,7 +25,7 @@
                         marigold: {
                             DEFAULT: '#F4B41A',
                             bright: '#FFD166',
-                            soft: '#FFF9E6',
+                            soft: '#FFF6D8',
                             dark: '#C98A00',
                         },
                         royalGold: {
@@ -34,8 +34,8 @@
                             dark: '#997A15',
                         },
                         ivory: {
-                            DEFAULT: '#FFFDF9',
-                            warm: '#FDF8EC',
+                            DEFAULT: '#FFFDF7',
+                            warm: '#FDF4D7',
                         }
                     },
                     fontFamily: {
@@ -56,34 +56,34 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
+        /* পুরো স্ক্রিনজুড়ে উজ্জ্বল গোল্ডেন + ৫% মাল্টি-কালার শিমার */
         body {
-            background-color: #2E0409;
+            background-color: #E8C362;
             background-image:
-                radial-gradient(circle at 50% 15%, #6B0F1A 0%, #2E0409 75%),
-                repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.03) 0px, rgba(212, 175, 55, 0.03) 1px, transparent 1px, transparent 14px);
+                linear-gradient(135deg, rgba(255,182,193,0.06) 0%, rgba(144,238,144,0.04) 35%, rgba(173,216,230,0.06) 70%, rgba(255,245,204,0.08) 100%),
+                radial-gradient(circle at 50% 15%, #FFF2BE 0%, #E7C05D 55%, #CFA23E 100%);
             font-family: 'Cormorant Garamond', serif;
             overflow-x: hidden;
             -webkit-tap-highlight-color: transparent;
         }
 
         .royal-ivory-card {
-            background-color: #FFFDF9;
+            background-color: #F4DC96;
             background-image:
-                radial-gradient(rgba(212, 175, 55, 0.14) 1px, transparent 0),
-                radial-gradient(rgba(107, 15, 26, 0.04) 1px, transparent 0);
-            background-size: 28px 28px;
-            background-position: 0 0, 14px 14px;
+                linear-gradient(135deg, rgba(255,182,193,0.05) 0%, rgba(144,238,144,0.03) 40%, rgba(173,216,230,0.05) 75%, rgba(255,248,214,0.08) 100%),
+                linear-gradient(180deg, #FFF0BD 0%, #F2D78B 50%, #E5C165 100%);
         }
 
         .velvet-maroon-bg {
             background: radial-gradient(circle at 30% 20%, #8E1624 0%, #6B0F1A 60%, #4A0710 100%);
-            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.55);
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.45);
         }
 
-        .gold-foil-text {
-            background: linear-gradient(135deg, #F4B41A 0%, #FFF3B0 35%, #D4AF37 68%, #FFE57F 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .golden-shimmer-bg {
+            background:
+                linear-gradient(135deg, rgba(255,182,193,0.06) 0%, rgba(144,238,144,0.04) 40%, rgba(173,216,230,0.06) 70%, rgba(255,245,204,0.08) 100%),
+                radial-gradient(circle at 50% 25%, #FFF3BD 0%, #E7C15D 55%, #C89B37 100%);
+            box-shadow: inset 0 0 40px rgba(107, 15, 26, 0.16), 0 10px 30px rgba(74, 7, 16, 0.25);
         }
 
         .book-scene {
@@ -108,7 +108,16 @@
             100% { transform: rotate(360deg); }
         }
         .animate-slow-rotate {
-            animation: slowRotate 50s linear infinite;
+            animation: slowRotate 45s linear infinite;
+        }
+
+        @keyframes crescentGlow {
+            0%, 100% { transform: scale(1); opacity: 0.92; }
+            50% { transform: scale(1.08); opacity: 1; }
+        }
+        .animate-crescent {
+            transform-origin: center;
+            animation: crescentGlow 3.2s ease-in-out infinite;
         }
 
         @keyframes floatPulse {
@@ -153,79 +162,93 @@
 </head>
 <body class="min-h-screen flex justify-center items-start selection:bg-maroon selection:text-marigold-bright">
 
-    <canvas id="petalsCanvas" class="fixed inset-0 pointer-events-none z-40 w-full h-full"></canvas>
+    <canvas id="petalsCanvas" class="fixed inset-0 pointer-events-none z-[55] w-full h-full"></canvas>
 
-    <main class="relative w-full max-w-md min-h-screen royal-ivory-card shadow-[0_0_70px_rgba(0,0,0,0.85)] overflow-hidden border-x-2 border-royalGold/70">
+    <main class="relative w-full max-w-md min-h-screen royal-ivory-card shadow-[0_12px_45px_rgba(74,7,16,0.28)] overflow-hidden border-x border-maroon/30">
 
         <!-- 1. 3D OPENING BOOK COVER -->
-        <section id="bookOverlay" class="fixed inset-0 z-50 flex justify-center items-center bg-black/80 backdrop-blur-sm transition-opacity duration-700">
+        <section id="bookOverlay" class="fixed inset-0 z-50 flex justify-center items-center bg-[#E8C362]/90 backdrop-blur-[2px] transition-opacity duration-700">
             <div class="book-scene w-full max-w-md h-full max-h-[100dvh] p-3 sm:p-5 flex items-center justify-center">
                 <div id="bookCover" onclick="openWeddingBook()" role="button" tabindex="0" aria-label="Tap the book to open wedding invitation"
-                     class="book-cover relative w-full h-full velvet-maroon-bg rounded-r-2xl rounded-l-md border-2 border-royalGold shadow-2xl cursor-pointer flex flex-col justify-between items-center p-6 text-center select-none overflow-hidden">
+                     class="book-cover relative w-full h-full golden-shimmer-bg rounded-r-2xl rounded-l-md border-2 border-maroon/70 shadow-2xl cursor-pointer flex flex-col justify-between items-center p-6 text-center select-none overflow-hidden">
 
-                    <div class="absolute left-0 top-0 bottom-0 w-5 bg-gradient-to-r from-black/75 via-royalGold/30 to-transparent border-r border-royalGold/40"></div>
-                    <div class="absolute left-6 top-0 bottom-0 w-[1px] bg-royalGold/35"></div>
+                    <div class="absolute left-0 top-0 bottom-0 w-5 bg-gradient-to-r from-maroon/20 via-maroon/10 to-transparent border-r border-maroon/25"></div>
+                    <div class="absolute left-6 top-0 bottom-0 w-[1px] bg-maroon/20"></div>
 
-                    <div class="absolute inset-3.5 border border-royalGold/80 rounded-r-xl rounded-l-sm pointer-events-none"></div>
-                    <div class="absolute inset-5 border border-dashed border-marigold-bright/45 rounded-r-lg rounded-l-sm pointer-events-none"></div>
+                    <div class="absolute inset-3.5 border-2 border-maroon/75 rounded-r-xl rounded-l-sm pointer-events-none"></div>
+                    <div class="absolute inset-5 border border-dashed border-maroon/40 rounded-r-lg rounded-l-sm pointer-events-none"></div>
 
-                    <svg class="w-12 h-12 text-royalGold absolute top-5 left-7" viewBox="0 0 64 64" fill="none">
+                    <svg class="w-12 h-12 text-maroon absolute top-5 left-7" viewBox="0 0 64 64" fill="none">
                         <path d="M4 4H46C26 4 14 16 14 36V4" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="14" cy="14" r="3.5" fill="#FFFDF9"/>
+                        <circle cx="14" cy="14" r="3.5" fill="#6B0F1A"/>
                     </svg>
-                    <svg class="w-12 h-12 text-royalGold absolute top-5 right-5 rotate-90" viewBox="0 0 64 64" fill="none">
+                    <svg class="w-12 h-12 text-maroon absolute top-5 right-5 rotate-90" viewBox="0 0 64 64" fill="none">
                         <path d="M4 4H46C26 4 14 16 14 36V4" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="14" cy="14" r="3.5" fill="#FFFDF9"/>
+                        <circle cx="14" cy="14" r="3.5" fill="#6B0F1A"/>
                     </svg>
-                    <svg class="w-12 h-12 text-royalGold absolute bottom-5 left-7 -rotate-90" viewBox="0 0 64 64" fill="none">
+                    <svg class="w-12 h-12 text-maroon absolute bottom-5 left-7 -rotate-90" viewBox="0 0 64 64" fill="none">
                         <path d="M4 4H46C26 4 14 16 14 36V4" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="14" cy="14" r="3.5" fill="#FFFDF9"/>
+                        <circle cx="14" cy="14" r="3.5" fill="#6B0F1A"/>
                     </svg>
-                    <svg class="w-12 h-12 text-royalGold absolute bottom-5 right-5 rotate-180" viewBox="0 0 64 64" fill="none">
+                    <svg class="w-12 h-12 text-maroon absolute bottom-5 right-5 rotate-180" viewBox="0 0 64 64" fill="none">
                         <path d="M4 4H46C26 4 14 16 14 36V4" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="14" cy="14" r="3.5" fill="#FFFDF9"/>
+                        <circle cx="14" cy="14" r="3.5" fill="#6B0F1A"/>
                     </svg>
 
                     <div class="mt-6 z-10">
-                        <p class="text-marigold-bright text-xl sm:text-2xl tracking-wide mb-0.5">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-                        <p class="font-bengali text-ivory text-xs sm:text-sm tracking-wider">॥ বিসমিল্লাহির রাহমানির রাহিম ॥</p>
-                        <div class="w-32 h-[1.5px] bg-gradient-to-r from-transparent via-royalGold to-transparent mx-auto mt-2"></div>
+                        <p class="text-maroon-deep text-lg sm:text-xl font-bold tracking-wide mb-0.5">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+                        <p class="font-bengali text-maroon font-bold text-xs sm:text-sm tracking-wider">॥ বিসমিল্লাহির রাহমানির রাহিম ॥</p>
+                        <div class="w-32 h-[1px] bg-gradient-to-r from-transparent via-maroon to-transparent mx-auto mt-2"></div>
                     </div>
 
                     <div class="z-10 flex flex-col items-center my-auto px-2">
-                        <div class="relative w-44 h-44 flex items-center justify-center mb-4">
-                            <svg class="w-full h-full text-royalGold animate-slow-rotate drop-shadow-[0_4px_14px_rgba(212,175,55,0.45)]" viewBox="0 0 200 200" fill="none">
-                                <circle cx="100" cy="100" r="93" stroke="#FFFDF9" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.75"/>
-                                <circle cx="100" cy="100" r="85" stroke="currentColor" stroke-width="2.2"/>
-                                <rect x="40" y="40" width="120" height="120" stroke="currentColor" stroke-width="2.2" fill="rgba(255,253,249,0.06)"/>
-                                <rect x="40" y="40" width="120" height="120" transform="rotate(45 100 100)" stroke="currentColor" stroke-width="2.2" fill="rgba(244,180,26,0.08)"/>
-                                <circle cx="100" cy="100" r="48" stroke="#FFFDF9" stroke-width="1.4" opacity="0.85"/>
+                        <div class="relative w-48 h-48 flex items-center justify-center mb-4">
+                            <svg class="w-full h-full text-maroon animate-slow-rotate drop-shadow-sm" viewBox="0 0 200 200" fill="none">
+                                <circle cx="100" cy="100" r="93" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.65"/>
+                                <circle cx="100" cy="100" r="85" stroke="currentColor" stroke-width="1.8"/>
+                                <g stroke="currentColor" stroke-width="1.3" opacity="0.85">
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(30 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(60 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(90 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(120 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(150 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(180 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(210 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(240 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(270 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(300 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                    <path d="M100 15 Q111 33 100 50 Q89 33 100 15 Z" transform="rotate(330 100 100)" fill="rgba(107,15,26,0.06)"/>
+                                </g>
+                                <circle cx="100" cy="100" r="54" stroke="currentColor" stroke-width="1.5" fill="rgba(255,246,216,0.4)"/>
                             </svg>
+
                             <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                <svg class="w-6 h-6 text-marigold-bright mb-0.5" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+                                <svg class="w-8 h-8 text-maroon mb-1 animate-crescent" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M19.5 5A12.5 12.5 0 1 0 31 22.8 10 10 0 1 1 19.5 5Z"/>
+                                    <polygon points="26,8 27.1,10.5 29.8,10.8 27.8,12.6 28.4,15.2 26,13.8 23.6,15.2 24.2,12.6 22.2,10.8 24.9,10.5"/>
                                 </svg>
-                                <span class="font-cinzel text-2xl font-extrabold text-ivory tracking-widest">J &amp; M</span>
-                                <span class="text-[10px] font-cinzel uppercase tracking-[0.22em] text-marigold-bright mt-0.5">04 • 12 • 2026</span>
+                                <span class="font-cinzel text-2xl font-extrabold text-maroon-deep tracking-widest leading-none">J &amp; M</span>
+                                <span class="text-[9px] font-cinzel uppercase tracking-[0.2em] text-maroon font-extrabold mt-1">04 • 12 • 2026</span>
                             </div>
                         </div>
 
-                        <h1 class="font-bengali text-3xl sm:text-4xl font-bold gold-foil-text tracking-wide mb-1">
+                        <h1 class="font-bengali text-3xl sm:text-4xl font-bold text-maroon drop-shadow-sm tracking-wide mb-0.5">
                             শুভ বিবাহ
                         </h1>
-                        <h2 class="font-cinzel text-2xl sm:text-3xl font-bold tracking-[0.18em] text-ivory uppercase">
+                        <h2 class="font-cinzel text-xl sm:text-2xl font-bold tracking-[0.22em] text-maroon-deep uppercase">
                             Shubho Bibaho
                         </h2>
-                        <div class="w-44 h-[1.5px] bg-gradient-to-r from-transparent via-royalGold to-transparent my-3"></div>
-                        <p class="font-cormorant italic text-lg text-ivory/95 leading-snug">
+                        <div class="w-44 h-[1.5px] bg-gradient-to-r from-transparent via-maroon to-transparent my-2.5"></div>
+                        <p class="font-cormorant italic text-base text-maroon/90 leading-snug">
                             Royal Wedding Invitation of<br>
-                            <span class="font-bold text-marigold-bright not-italic">MD Jishan Khan &amp; Mehenaj Meherin Maisha</span>
+                            <span class="font-bold text-maroon-deep not-italic">MD Jishan Khan &amp; Mehenaj Meherin Maisha</span>
                         </p>
                     </div>
 
                     <div class="mb-5 z-10 animate-float-pulse">
-                        <div class="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border-2 border-royalGold bg-ivory text-maroon shadow-[0_0_25px_rgba(244,180,26,0.5)]">
-                            <span class="w-2.5 h-2.5 rounded-full bg-maroon animate-ping"></span>
+                        <div class="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-maroon/30 bg-maroon text-marigold-bright shadow-lg hover:bg-maroon-deep transition">
+                            <span class="w-2.5 h-2.5 rounded-full bg-marigold animate-ping"></span>
                             <span class="font-cinzel text-xs tracking-[0.16em] uppercase font-extrabold">Tap the book to open</span>
                         </div>
                     </div>
@@ -287,12 +310,12 @@
             <p class="font-bengali text-maroon font-bold text-base tracking-wide">
                 ॥ বিসমিল্লাহির রাহমানির রাহিম ॥
             </p>
-            <div class="inline-block mt-1.5 px-5 py-1 rounded-full bg-marigold-soft border border-royalGold shadow-xs">
+            <div class="inline-block mt-1.5 px-5 py-1 rounded-full bg-marigold-soft/90 border border-maroon/40 shadow-xs">
                 <span class="font-bengali text-maroon font-bold text-base tracking-wider">॥ শুভ বিবাহ | Shubho Bibaho ॥</span>
             </div>
 
             <div class="relative mt-6 mx-auto max-w-[375px] p-1.5 bg-gradient-to-b from-royalGold via-maroon to-royalGold mughal-arch shadow-xl">
-                <div class="bg-gradient-to-b from-marigold-soft via-ivory to-marigold-soft mughal-arch px-5 pt-11 pb-9 border border-maroon/25 relative overflow-hidden">
+                <div class="bg-gradient-to-b from-ivory-warm via-ivory to-ivory-warm mughal-arch px-5 pt-11 pb-9 border border-maroon/25 relative overflow-hidden">
 
                     <div class="relative z-10">
                         <h1 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon tracking-wide">
@@ -341,9 +364,9 @@
         <!-- 3. SAVE THE DATE — PULL TO REVEAL SCROLL -->
         <section class="px-5 py-8 reveal-block">
             <div class="text-center mb-4">
-                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Royal Proclamation</span>
+                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-maroon font-bold">Royal Proclamation</span>
                 <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Save the Date – Pull to Reveal</h2>
-                <p id="scrollInstruction" class="font-cormorant italic text-base text-maroon/85 mt-0.5">
+                <p id="scrollInstruction" class="font-cormorant italic text-base text-maroon/90 mt-0.5">
                     Pull or tap the maroon &amp; gold tassel below to unroll
                 </p>
             </div>
@@ -434,14 +457,13 @@
         <!-- 5. WEDDING FESTIVITIES -->
         <section class="py-8 reveal-block">
             <div class="px-5 text-center mb-5">
-                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Celebrations</span>
+                <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-maroon font-bold">Celebrations</span>
                 <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-maroon mt-1">Wedding Festivities</h2>
-                <p class="font-cormorant italic text-base text-gray-700">Swipe cards for date, time, venue, dress code &amp; color combination</p>
+                <p class="font-cormorant italic text-base text-maroon-deep">Swipe cards for date, time, venue, dress code &amp; color combination</p>
             </div>
 
             <div id="festivitiesCarousel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-4 no-scrollbar scroll-smooth">
-                <!-- Gaye Holud (No location) -->
-                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-marigold shadow-lg p-6 text-center flex flex-col justify-between">
+                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-maroon/40 shadow-lg p-6 text-center flex flex-col justify-between">
                     <div>
                         <span class="inline-block px-3.5 py-1 rounded-full bg-marigold-soft border border-marigold text-maroon font-cinzel text-[11px] font-bold uppercase tracking-widest mb-3">
                             03/12/2026 • Thursday
@@ -466,8 +488,7 @@
                     </div>
                 </article>
 
-                <!-- Wedding Ceremony (কনের বাড়িতে) -->
-                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-royalGold shadow-lg p-6 text-center flex flex-col justify-between">
+                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-maroon/40 shadow-lg p-6 text-center flex flex-col justify-between">
                     <div>
                         <span class="inline-block px-3.5 py-1 rounded-full bg-maroon text-marigold-bright font-cinzel text-[11px] font-bold uppercase tracking-widest mb-3">
                             04/12/2026 • Friday
@@ -489,8 +510,7 @@
                     </div>
                 </article>
 
-                <!-- Wedding Reception (ছেলের বাড়িতে) -->
-                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-royalGold shadow-lg p-6 text-center flex flex-col justify-between">
+                <article class="snap-center shrink-0 w-[85%] bg-ivory rounded-3xl border-2 border-maroon/40 shadow-lg p-6 text-center flex flex-col justify-between">
                     <div>
                         <span class="inline-block px-3.5 py-1 rounded-full bg-marigold-soft border border-royalGold text-maroon font-cinzel text-[11px] font-bold uppercase tracking-widest mb-3">
                             05/12/2026 • Saturday
@@ -516,7 +536,7 @@
 
         <!-- 6. VENUE, KISHOREGANJ WEATHER NOTE & WHATSAPP -->
         <section class="px-5 py-8 reveal-block">
-            <div class="bg-ivory rounded-3xl border-2 border-royalGold p-6 text-center shadow-lg space-y-4">
+            <div class="bg-ivory rounded-3xl border-2 border-maroon/40 p-6 text-center shadow-lg space-y-4">
                 <div>
                     <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Royal Location</span>
                     <h2 class="font-playfair text-2xl font-bold text-maroon mt-1">Venue &amp; Contact</h2>
@@ -554,7 +574,7 @@
 
         <!-- 7. LIVE BLESSING WALL -->
         <section id="blessings" class="px-5 py-8 reveal-block">
-            <div class="bg-ivory rounded-3xl border-2 border-royalGold p-6 shadow-lg">
+            <div class="bg-ivory rounded-3xl border-2 border-maroon/40 p-6 shadow-lg">
                 <div class="text-center mb-5">
                     <span class="font-cinzel text-xs uppercase tracking-[0.25em] text-royalGold-dark font-bold">Wishes &amp; Duas</span>
                     <h2 class="font-playfair text-2xl font-bold text-maroon mt-1">Live Blessing Wall</h2>
@@ -585,11 +605,11 @@
 
         <!-- Footer -->
         <footer class="px-5 pb-10 pt-2 text-center">
-            <div class="w-32 h-[1px] bg-gradient-to-r from-transparent via-royalGold to-transparent mx-auto mb-3"></div>
+            <div class="w-32 h-[1px] bg-gradient-to-r from-transparent via-maroon to-transparent mx-auto mb-3"></div>
             <p class="font-cormorant italic text-maroon font-semibold text-base">
                 MD Jishan Khan &amp; Mehenaj Meherin Maisha • 03–05 December 2026
             </p>
-            <p class="font-bengali text-xs text-gray-600 mt-1">
+            <p class="font-bengali text-xs text-maroon-deep/80 mt-1">
                 গাইলকাটা, কুলিয়ারচর, কিশোরগঞ্জ, বাংলাদেশ
             </p>
         </footer>
@@ -703,7 +723,7 @@
             blocks.forEach((el) => observer.observe(el));
         })();
 
-        (function initPetals() {
+        (function initPetalsAndStars() {
             const canvas = document.getElementById("petalsCanvas");
             if (!canvas) return;
             const ctx = canvas.getContext("2d");
@@ -715,33 +735,74 @@
                 height = canvas.height = window.innerHeight;
             });
 
-            const colors = ["#F4B41A", "#FFD166", "#941B29", "#FFF3B0"];
-            const petals = Array.from({ length: 18 }, () => ({
+            const petalColors = ["#FFFDF7", "#FFE39F", "#F4B41A", "#941B29"];
+            const petals = Array.from({ length: 24 }, () => ({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                r: 3 + Math.random() * 4,
-                speedY: 0.6 + Math.random() * 1.1,
-                speedX: -0.4 + Math.random() * 0.8,
+                r: 2.8 + Math.random() * 2.6,
+                speedY: 0.55 + Math.random() * 0.85,
+                speedX: -0.35 + Math.random() * 0.7,
                 angle: Math.random() * Math.PI * 2,
-                color: colors[Math.floor(Math.random() * colors.length)]
+                color: petalColors[Math.floor(Math.random() * petalColors.length)]
             }));
+
+            const stars = Array.from({ length: 20 }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                size: 3 + Math.random() * 2.8,
+                twinkleSpeed: 0.03 + Math.random() * 0.035,
+                phase: Math.random() * Math.PI * 2,
+                driftY: 0.2 + Math.random() * 0.35,
+                color: Math.random() > 0.35 ? "#FFFDF7" : "#6B0F1A"
+            }));
+
+            function drawFourPointStar(cx, cy, outerR, alpha, color) {
+                const innerR = outerR * 0.35;
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.globalAlpha = alpha;
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                for (let i = 0; i < 8; i++) {
+                    const r = i % 2 === 0 ? outerR : innerR;
+                    const a = (i * Math.PI) / 4;
+                    const x = Math.cos(a) * r;
+                    const y = Math.sin(a) * r;
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.closePath();
+                ctx.fill();
+                ctx.restore();
+            }
 
             function draw() {
                 ctx.clearRect(0, 0, width, height);
+
                 for (const p of petals) {
                     p.y += p.speedY;
-                    p.x += p.speedX + Math.sin(p.angle) * 0.35;
+                    p.x += p.speedX + Math.sin(p.angle) * 0.3;
                     p.angle += 0.02;
                     if (p.y > height + 12) { p.y = -12; p.x = Math.random() * width; }
                     ctx.save();
                     ctx.translate(p.x, p.y);
                     ctx.rotate(p.angle);
+                    ctx.globalAlpha = 0.85;
                     ctx.fillStyle = p.color;
                     ctx.beginPath();
-                    ctx.ellipse(0, 0, p.r * 1.2, p.r * 0.7, 0, 0, Math.PI * 2);
+                    ctx.ellipse(0, 0, p.r * 1.25, p.r * 0.72, 0, 0, Math.PI * 2);
                     ctx.fill();
                     ctx.restore();
                 }
+
+                for (const s of stars) {
+                    s.phase += s.twinkleSpeed;
+                    s.y += s.driftY;
+                    if (s.y > height + 10) { s.y = -10; s.x = Math.random() * width; }
+                    const alpha = 0.4 + (Math.sin(s.phase) + 1) * 0.4;
+                    drawFourPointStar(s.x, s.y, s.size, alpha, s.color);
+                }
+
                 requestAnimationFrame(draw);
             }
             draw();
